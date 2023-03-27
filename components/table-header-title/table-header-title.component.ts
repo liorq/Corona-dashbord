@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CoronaService } from 'src/app/services/corona.service';
 import { clickCounterObj } from 'src/app/data/app.arrays';
-import { getContainerNgClass } from 'src/app/data/app.functions';
+import { getNgClassTableHdrCmp } from 'src/app/data/app.functions';
 
 @Component({
   selector: 'app-table-header-title',
@@ -14,7 +14,7 @@ import { getContainerNgClass } from 'src/app/data/app.functions';
 export class TableHeaderTitleComponent implements OnInit {
   @Input() ContainerClass: string = 'align-div cell title lavender-background';
   @Input() rectangleNgClass: {} = {};
-  @Input() ContainerNgClass: {} = getContainerNgClass(this.isDarkModeActive);
+  @Input() ContainerNgClass: {} = getNgClassTableHdrCmp(this.isDarkModeActive);
   @Input() text?: string = '';
   @Input() textClass: string = 'fontWeight400';
   @Input() tableTitleId?: string;

@@ -2,7 +2,7 @@
   <ng-container *ngFor="let row of tablesData">
     <div class="row">
       <div [ngClass]="getNgClassHeight()" class="cell fontWeight400">
-        <div class="color" [ngClass]="getNgClassColor(row, 2)">
+        <div class="color" [ngClass]="getTableBodyClassNg(row, 2)">
           {{ row.id }}
         </div>
       </div>
@@ -28,7 +28,7 @@
       </div>
 
       <div [ngClass]="getNgClassHeight()" class="cell weight">
-        <div [ngClass]="getNgClassColor(row, 1)">
+        <div [ngClass]="getTableBodyClassNg(row, 1)">
           {{ row.phone }}
         </div>
       </div>

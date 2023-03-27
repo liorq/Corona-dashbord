@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CoronaService } from 'src/app/services/corona.service';
 import { clickCounterObj } from 'src/app/data/app.arrays';
 import { graphNameObj } from 'src/app/data/app.objects';
-import { getNgClassColor } from 'src/app/data/app.functions';
+import { getTableBodyClassNg } from 'src/app/data/app.functions';
 import { DataVisualGenericComponent } from '../generic-table/generic-table.component';
 
 @Component({
@@ -17,12 +17,11 @@ export class TableBodyComponent implements OnInit {
   tablesData?: any[] = [];
   isDarkModeActive?: boolean;
   isTable?: boolean;
-  ////קשור למחלקה
   clickCounterObj = clickCounterObj;
   isSmallColumns?: {};
   constructor(private coronaSvc: CoronaService) {}
   ngOnInit(): void {
-this.initializeVisualComponentProperties()
+   this.initializeVisualComponentProperties()
 
     this.coronaSvc.filteredData.subscribe((newData) => {
       if (this.graphName && newData != undefined) {
@@ -41,8 +40,8 @@ this.initializeVisualComponentProperties()
     this.isTable = isTable;
 
   }
-  getNgClassColor(row: {}, position: number) {
-    return getNgClassColor(row, position, this.graphName || '');
+  getTableBodyClassNg(row: {}, position: number) {
+    return getTableBodyClassNg(row, position, this.graphName || '');
   }
   getNgClassHeight() {
     return { tableHeight2: !this.isSmallColumns };

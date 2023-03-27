@@ -3,7 +3,7 @@ import * as echarts from 'echarts';
 import { graphPeriods, optionPeriods, periodOfTimeMap } from '../data/app.arrays';
 ///dont remove!
 import { getDeathsGraph,getTestsGraph,getVaccGraph,getFurthersGraph } from '../data/app.graphData';
-import { optionFunctions } from '../data/app.objects';
+import { optionFunctions, selectedOptionObj } from '../data/app.objects';
 import { MyComponentGraphsType } from './app.types';
 import { DataVisualGenericComponent } from '../components/generic-table/generic-table.component';
 import { TestsComponent } from '../components/tests/tests.component';
@@ -14,27 +14,17 @@ import { MyOptionsComponent } from '../components/my-options/my-options.componen
   providedIn: 'root'
 })
 export class GraphsService {
-  selectedOption = new BehaviorSubject<{[key:string]:string}>({
-    '1': 'חודש אחרון',
-    '2':  'חודש אחרון',
-    '3': 'חולים פעילים',
-    '4': 'מאומתים',
-    '5': 'כלל הישובים',
-    '6': 'כלל הישובים',
-  });
 
-  constructor() { }
+  selectedOption = new BehaviorSubject<{[key:string]:string}>(selectedOptionObj);
 
 
   updateDataBasedOnTimePeriods(componentObj: MyComponentGraphsType, Option: string,newTimePeriods:any,graphField:string,position:number) {
     const selectedOption = this.selectedOption.getValue();
-    console.log(selectedOption)
     selectedOption[Option] = componentObj.selectedOption = periodOfTimeMap[newTimePeriods[graphField]];
-    
+
     componentObj.timePeriodsInDays = newTimePeriods?.[graphField];
     componentObj.option = optionFunctions[Option](componentObj.timePeriodsInDays, componentObj.isDarkModeActive);
     componentObj.visObjsArray[position].optionObj= componentObj.option
-
     this.selectedOption.next(selectedOption);
 }
 
@@ -113,12 +103,13 @@ export class GraphsService {
     componentObj.chart = myChart;
   }
   updateSelectedTimePeriodHandler(componentObj:MyOptionsComponent) {
-    if (this.isSelectableConfirm(componentObj)) {
-      componentObj.periodOfTime = optionPeriods[componentObj.selectedOptions.firstChoice];
+    if (this.isSelectableConfirm(componentObj))
+      this.updateSelectedTimePeriod(componentObj)
+  }
+  updateSelectedTimePeriod(componentObj:MyOptionsComponent){
+    componentObj.periodOfTime = optionPeriods[componentObj.selectedOptions.firstChoice];
       componentObj.timePeriods[graphPeriods[componentObj.graphName||""]] = componentObj.periodOfTime;
       componentObj.coronaSvc.timePeriodsInDays.next(componentObj.timePeriods);
-    }
-
   }
   isSelectableConfirm(componentObj:MyOptionsComponent){
     return componentObj.graphName && componentObj.selectedOptions.firstChoice;

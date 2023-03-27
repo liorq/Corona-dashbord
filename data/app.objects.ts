@@ -49,3 +49,11 @@ export const timePeriodsInDaysObj={
     firstTable: false,
     secondTable: false,
  }
+  export const selectedOptionObj:{[key:string]:string}={
+    '1': 'חודש אחרון',
+    '2':  'חודש אחרון',
+    '3': 'חולים פעילים',
+    '4': 'מאומתים',
+    '5': 'כלל הישובים',
+    '6': 'כלל הישובים',
+  }

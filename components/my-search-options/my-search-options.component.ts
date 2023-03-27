@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CoronaService } from 'src/app/services/corona.service';
 import { graphDropdownMap, tableTypes } from 'src/app/data/app.objects';
-import { getInputClassObj, getNgClassForBtns } from 'src/app/data/app.functions';
+import { getSearchOptionsInputClass, getNgClassForBtns } from 'src/app/data/app.functions';
 import { DataVisualGenericComponent } from '../generic-table/generic-table.component';
 import { TablesService } from 'src/app/services/tables.service';
 
@@ -41,7 +41,7 @@ export class MySearchOptionsComponent implements OnInit {
       this.filteredData =newData[tableTypes[this.graphName||""] ];
     });
 
-    this.InputClass = getInputClassObj(this.graphName);
+    this.InputClass = getSearchOptionsInputClass(this.graphName);
     this.ngClassForBtns = getNgClassForBtns(this.isDarkModeActive);
   }
 

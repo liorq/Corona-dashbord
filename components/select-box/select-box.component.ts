@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { getBtnNgClass, getRecNgClass } from 'src/app/data/app.functions';
+import { getSelectBoxBtnsClass, getSelectBoxRecClass } from 'src/app/data/app.functions';
 import { graphDropdownMap, graphNumber } from 'src/app/data/app.objects';
 import { CoronaService } from 'src/app/services/corona.service';
 import { DataVisualGenericComponent } from '../generic-table/generic-table.component';
@@ -34,8 +34,8 @@ export class SelectBoxComponent implements OnInit {
     this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;
 
-      this.btnNgClass = getBtnNgClass(this.isDarkModeActive);
-      this.RecNgClass = getRecNgClass(
+      this.btnNgClass = getSelectBoxBtnsClass(this.isDarkModeActive);
+      this.RecNgClass = getSelectBoxRecClass(
         this.isDarkModeActive,
         this.dropdownVisible
       );
@@ -48,7 +48,7 @@ export class SelectBoxComponent implements OnInit {
   }
   changeRecClassValue() {
     this.dropdownVisible = !this.dropdownVisible;
-    this.RecNgClass = getRecNgClass(
+    this.RecNgClass = getSelectBoxRecClass(
       this.isDarkModeActive,
       this.dropdownVisible
     );

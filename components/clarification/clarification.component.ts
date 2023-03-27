@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { getNgClassObJ } from 'src/app/data/app.functions';
+import { getClarificationDarkModeNgClass } from 'src/app/data/app.functions';
 import { CoronaService } from 'src/app/services/corona.service';
 
 @Component({
@@ -20,7 +20,7 @@ export class ClarificationComponent implements OnInit {
   ngOnInit(): void {
     this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;
-      this.ngClassObJ = getNgClassObJ(this.isDarkModeActive);
+      this.ngClassObJ = getClarificationDarkModeNgClass(this.isDarkModeActive);
     });
   }
 }

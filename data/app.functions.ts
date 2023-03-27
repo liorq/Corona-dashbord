@@ -136,27 +136,28 @@ export function getTableData(isDarkModeActive?: boolean, graphName?: string) {
     ? headersOfLightTable
     : headersOfVaccinationTable;
 }
-export function getNgClassObJ(isDarkModeActive: boolean) {
+export function getClarificationDarkModeNgClass(isDarkModeActive: boolean) {
   return { 'pic-graph-light-dark': isDarkModeActive };
 }
+////for a multiples uses
+
 export function getNgClassForBtns(isDarkModeActive: boolean) {
   return { 'deep-blue-btn': isDarkModeActive };
 }
 
-export function getInputClassObj(graphName: string | undefined) {
+export function getSearchOptionsInputClass(graphName: string | undefined) {
   return {
     'options-list-for-table1': graphName == 'Vaccination',
     'options-list-for-table2': graphName != 'Vaccination',
   };
 }
 
-//////
 
-export function getBtnNgClass(isDarkModeActive: boolean | undefined) {
+
+export function getSelectBoxBtnsClass(isDarkModeActive: boolean | undefined) {
   return { 'selected-option-darkMode': isDarkModeActive };
 }
-
-export function getRecNgClass(
+export function getSelectBoxRecClass(
   isDarkModeActive: boolean | undefined,
   dropdownVisible: boolean | undefined
 ) {
@@ -170,15 +171,14 @@ export function getRecNgClass(
 export function getCurrentSortObj() {
   return { column: 'id', direction: 'asc' };
 }
-export function getContainerNgClass(isDarkModeActive: boolean | undefined) {
+export function getNgClassTableHdrCmp(isDarkModeActive: boolean | undefined) {
   return { 'deep-blue': isDarkModeActive,
 
 };
 }
 
 
-
-export function getNgClassColor(
+export function getTableBodyClassNg(
   row: any,
   position: number,
   graphName: string | undefined
@@ -202,7 +202,6 @@ export function getNgClassColor(
 }
 
 
-////getGraphLegendList
 export function getGraphLegendList(isDarkModeActive: boolean) {
   return [
     {
@@ -330,8 +329,10 @@ export function getGraphLegendList(isDarkModeActive: boolean) {
   ];
 }
 
-/////obj
-export function getNgClassContainer(
+
+////getNgClassForDataVis
+
+export function getNgClassForDataVis(
   isDarkModeActive: boolean,
   isTable: boolean | undefined,
   graphName: string

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
 import {data,options} from 'src/app/data/app.arrays';
-import { getGraphLegendList, getNgClassContainer } from 'src/app/data/app.functions';
+import { getGraphLegendList, getNgClassForDataVis } from 'src/app/data/app.functions';
 import { CoronaService } from 'src/app/services/corona.service';
 import { GraphsService } from 'src/app/services/graphs.service';
 @Component({
@@ -43,7 +43,7 @@ export class DataVisualGenericComponent implements OnInit {
     private graphSvc: GraphsService) {}
 
   ngOnInit(){
-    this.ngClassContainer=getNgClassContainer(this.isDarkModeActive,this.isTable,this.graphName)
+    // this.ngClassContainer=getNgClassForDataVis(this.isDarkModeActive,this.isTable,this.graphName)
 
     this.coronaSvc.isDarkModeActive.subscribe((newStatus:boolean)=>{
       this.isDarkModeActive=newStatus;
@@ -56,9 +56,10 @@ export class DataVisualGenericComponent implements OnInit {
 
   }
   ngOnChanges() {
+    ////getNgClassForDataVis
     this.isGraphCustom = this.graphName === 'main1';
     this.isTableCustom = this.graphName === 'lights';
-    this.ngClassContainer=getNgClassContainer(this.isDarkModeActive,this.isTable,this.graphName)
+    this.ngClassContainer=getNgClassForDataVis(this.isDarkModeActive,this.isTable,this.graphName)
 
   }
   toggleDropdown() {
