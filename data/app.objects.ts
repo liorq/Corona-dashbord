@@ -1,19 +1,5 @@
 import { getDeathsGraph, getFurthersGraph, getTestsGraph, getVaccGraph } from "./app.graphData";
 
-export const componentNames: any = {
-  'מבט על': 'view-on',
-  'מדדים מרכזיים': 'major-indicators-component',
-  'מדדי תחלואה כללית': 'indices-of-general-morbidity-component',
-  'תחלואה ואשפוזי ילדים': 'morbidity-and-hospitalizations-component',
-  'תחלואה מחול': 'morbidity-from-abroad-component',
-  'השפעת התחסנות על התחלואה': 'effect-of-vaccination-on-morbidity-component',
-  נפטרים: 'deads-component',
-  בדיקות: 'tests-component',
-  'תחקורים נוספים': 'further-investigations-component',
-  'תחלואה חוזרת ומחלימים': 'recurrent-morbidity-and-recovery-component',
-  'התחסנות האוכלוסיה': 'vaccination-of-the-population-component',
-  'רמזור בישובים': 'lights-in-settlements-component',
-};
 
 
 
@@ -49,3 +35,17 @@ export const tableTypes:{[key:string]:string} = {
   'lights': 'firstTable',
   'Vaccination': 'secondTable',
 };
+export const timePeriodsInDaysObj={
+    firstGraph: 30,
+    secondGraph: 30,
+    thirdGraph: 650,
+    fourGraph: 720,
+  }
+  export const DropDownVisibleObj={
+    firstGraph: false,
+    secondGraph: false,
+    thirdGraph: false,
+    fourGraph: false,
+    firstTable: false,
+    secondTable: false,
+ }

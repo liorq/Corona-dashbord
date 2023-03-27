@@ -13,7 +13,7 @@
 
     <div class="graph-header">
       <app-clarification
-        *ngIf="graphName == 'main1'"
+        *ngIf="isGraphCustom"
         [className]="'pic-graph'"
         [ngClassObJ]="{ 'pic-graph-dark': isDarkModeActive }"
       ></app-clarification>
@@ -32,7 +32,7 @@
       <div
         *ngIf="isTable"
         [class]="
-          graphName == 'lights'
+        isTableCustom
             ? 'select-box-container-table1'
             : 'select-box-container'
         "
@@ -56,12 +56,12 @@
 
     <div *ngIf="isTable" class="container-color">
       <app-clarification
-        *ngIf="graphName == 'lights'"
+        *ngIf="isTableCustom"
         [className]="'pic-graph-light'"
       ></app-clarification>
       <app-color-squares
         class="little-container-text-and-color"
-        *ngIf="this.graphName == 'lights'"
+        *ngIf="isTableCustom"
       ></app-color-squares>
     </div>
     <app-table-header

@@ -14,12 +14,9 @@ import { getContainerNgClass } from 'src/app/data/app.functions';
 export class TableHeaderTitleComponent implements OnInit {
   @Input() ContainerClass: string = 'align-div cell title lavender-background';
   @Input() rectangleNgClass: {} = {};
-  @Input() graphName?: string;
   @Input() ContainerNgClass: {} = getContainerNgClass(this.isDarkModeActive);
   @Input() text?: string = '';
   @Input() textClass: string = 'fontWeight400';
-  @Input() tablesData?: any = [];
-  @Input() PositionRectangleNgClass?: number;
   @Input() tableTitleId?: string;
   isDarkModeActive?: boolean;
   clickCounterObj = clickCounterObj;

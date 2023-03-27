@@ -18,7 +18,6 @@ export class DataVisualGenericComponent implements OnInit {
   ngClassContainer?:{};
   ////change
   items = getItems(this.isDarkModeActive);
-
   @Input() isTable?:boolean;
   @Input()title?:string;
   @Input() chart: echarts.ECharts | null = null;
@@ -37,7 +36,9 @@ export class DataVisualGenericComponent implements OnInit {
   @Input() classContainer?:string="";
   @Input() options=options;
   @Input()classTable='table';
-///DataVisualizationComponent
+  isGraphCustom = this.graphName === 'main1';
+  isTableCustom = this.graphName === 'lights';
+
   constructor(private coronaSvc: CoronaService,
     private graphSvc: GraphsService) {}
 

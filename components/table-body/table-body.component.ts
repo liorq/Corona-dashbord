@@ -22,14 +22,7 @@ export class TableBodyComponent implements OnInit {
   isSmallColumns?: {};
   constructor(private coronaSvc: CoronaService) {}
   ngOnInit(): void {
-    const { graphName, tablesData, isDarkModeActive, isTable } = this.obj ?? {};
-    this.graphName = graphName;
-    this.tablesData = tablesData ?? [];
-    this.isDarkModeActive = isDarkModeActive;
-    this.isTable = isTable;
-
-
-
+this.initializeVisualComponentProperties()
 
     this.coronaSvc.filteredData.subscribe((newData) => {
       if (this.graphName && newData != undefined) {
@@ -38,6 +31,15 @@ export class TableBodyComponent implements OnInit {
     });
 
     this.isSmallColumns = this.graphName === 'lights';
+  }
+
+  initializeVisualComponentProperties(): void {
+    const { graphName, tablesData, isDarkModeActive, isTable } = this.obj ?? {};
+    this.graphName = graphName;
+    this.tablesData = tablesData ?? [];
+    this.isDarkModeActive = isDarkModeActive;
+    this.isTable = isTable;
+
   }
   getNgClassColor(row: {}, position: number) {
     return getNgClassColor(row, position, this.graphName || '');

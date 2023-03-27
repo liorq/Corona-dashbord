@@ -26,19 +26,21 @@ export class TableHeaderComponent implements OnInit {
 
   constructor(private coronaSvc: CoronaService,private tablesSvc: TablesService) {}
   ngOnInit(): void {
-    const { graphName, tablesData, isDarkModeActive, tableHeaderId,isTable } = this.obj ?? {};
-    this.graphName = graphName;
-    this.tablesData = tablesData ?? [];
-    this.isDarkModeActive = isDarkModeActive;
-    this.tableHeaderId=tableHeaderId
-    this.isTable=isTable;
+   this.initializeVisualComponentProperties()
 
     this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;
       this.headers = getTableData(this.isDarkModeActive,this.graphName);
     });
   }
-
+  initializeVisualComponentProperties(): void {
+    const { graphName, tablesData, isDarkModeActive, tableHeaderId,isTable } = this.obj ?? {};
+    this.graphName = graphName;
+    this.tablesData = tablesData ?? [];
+    this.isDarkModeActive = isDarkModeActive;
+    this.tableHeaderId=tableHeaderId
+    this.isTable=isTable;
+  }
   sortTableByColumnHandler(column: string) {
     this.tablesSvc.sortTableByColumnHandler(this,column)
   }

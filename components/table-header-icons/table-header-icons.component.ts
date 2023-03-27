@@ -19,19 +19,20 @@ export class TableHeaderIconsComponent {
   isDarkModeActive?: boolean;
   constructor(private coronaSvc: CoronaService) {}
   ngOnInit(): void {
+   this.initializeVisualComponentProperties()
+
+    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+      this.isDarkModeActive = newStatus;
+    });
+  }
+   initializeVisualComponentProperties(): void {
     const { options, isTable, title, selectedOption,graphName } = this.obj ?? {};
     this.graphName = graphName||"";
     this.options = options ?? [];
     this.isTable = isTable;
     this.title=title
     this.selectedOption=selectedOption
-
-
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
-      this.isDarkModeActive = newStatus;
-    });
   }
-
   toggleDropdown() {
     this.dropdownVisible = !this.dropdownVisible;
   }

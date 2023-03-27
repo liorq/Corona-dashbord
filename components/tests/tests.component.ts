@@ -15,10 +15,9 @@ import { GraphsService } from 'src/app/services/graphs.service';
 export class TestsComponent implements AfterViewInit,OnInit {
   timePeriodsInDays: number = 25;
   isDarkModeActive?: boolean;
-   chart: echarts.ECharts | null = null;
+  chart: echarts.ECharts | null = null;
   links = testLinks;
   selectedOption?: string;
-
   @Input()visObjsArray=testObj;
 
   public option?: {} ;
