@@ -1,0 +1,36 @@
+.background-snow{
+  background: #ffffff;
+  width: 96vw;
+  border-radius: 15px;
+}
+
+
+.background-dark-mode{
+  background:   #384f5f;
+  border-radius: 15px;
+
+ }
+.title{
+ font-size: 18px;
+  padding: 14px 22px;
+  font-weight: 550;
+  padding-top: 10px;
+  padding-right: 18px;
+
+}
+
+
+.background-snow{
+  padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+

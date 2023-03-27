@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap");
+.sticky-header{
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+
+*{
+  box-sizing: border-box;
+  text-align: right;
+  font-family: "Assistant", sans-serif;
+}
+.scrolling-area {
+
+  background: white;
+  direction: rtl;
+}
+
+.scrolling-element-inside {
+  direction: rtl;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.blue-font{
+  color: #222b45;
+
+}
+app-header{
+  height: 150px;
+}
+.opacity{
+  opacity: 0.1;
+}
+.container{
+  background:#e9edf5 ;
+}
+.dark-mode{
+  color: #fff;
+  background-color:#49667a;
+
+
+
+}
+.ltr{
+  direction: ltr;
+}
+
+.sticky-header::-webkit-scrollbar {
+  display: none;
+}
+
+app-summary-of7-days{
+  margin-top: 10px;
+  position:relative;
+  left: 1.5vw;
+}
+.empty-div{
+  height: 500px;
+}
+

@@ -1,0 +1,74 @@
+<div [class.container]="true" [ngClass]="ngClassContainer">
+  <div [ngClass]="{'table-darkMode':isDarkModeActive, 'background-dark-mode': isDarkModeActive }" [class]="classTable" >
+    <app-table-header-icons
+    [theObj]="this"
+    ></app-table-header-icons>
+
+    <app-ellipsis-icon  (click)="toggleShareAndDownload()"></app-ellipsis-icon>
+
+<app-share-and-download
+  [isActiveShareAndDownload]="isActiveShareAndDownload"
+  [isDarkModeActive]="isDarkModeActive">
+</app-share-and-download>
+
+    <div class="graph-header">
+      <app-clarification
+        *ngIf="graphName == 'main1'"
+        [className]="'pic-graph'"
+        [ngClassObJ]="{ 'pic-graph-dark': isDarkModeActive }"
+      ></app-clarification>
+
+      <app-variable-graph-label
+        [items]="items"
+        [graphName]="graphName"
+      ></app-variable-graph-label>
+
+      <div class="date">{{ textDownGraph }}</div>
+      <div [class]="ClassTextAboveGraph"> {{ textAboveGraph }}</div>
+
+    </div>
+
+    <div class="align-graph">
+      <div
+        *ngIf="isTable"
+        [class]="
+          graphName == 'lights'
+            ? 'select-box-container-table1'
+            : 'select-box-container'
+        "
+        (click)="toggleDropdown()">
+
+      <app-select-box
+      [selectBoxId]="selectBoxId"
+      [dropdownVisible]="dropdownVisible"
+      [graphName]="graphName"
+    ></app-select-box>
+
+        <app-my-search-options
+         [theObj]="this"
+          [dropdownVisible]="dropdownVisible"
+        ></app-my-search-options>
+      </div>
+
+      <div *ngIf="!isTable" id="{{ graphName }}" [style]="graphSize"></div>
+
+    </div>
+
+    <div *ngIf="isTable" class="container-color">
+      <app-clarification
+        *ngIf="graphName == 'lights'"
+        [className]="'pic-graph-light'"
+      ></app-clarification>
+      <app-color-squares
+        class="little-container-text-and-color"
+        *ngIf="this.graphName == 'lights'"
+      ></app-color-squares>
+    </div>
+    <app-table-header
+    [theObj]="this"
+    ></app-table-header>
+    <app-table-body
+    [theObj]="this"
+    ></app-table-body>
+  </div>
+</div>

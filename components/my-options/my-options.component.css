@@ -1,0 +1,17 @@
+.btns-container{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+div {
+  box-sizing: border-box;
+}
+li{
+  width: inherit;
+}
+li{
+  min-height: 20px;
+}
+#btnIdmain4{
+  position: initial;
+}

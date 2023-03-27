@@ -1,0 +1,16 @@
+<div >
+  <nav class="horizontal-nav">
+    <a (click)="toggleNav()" id="nav-toggle-btn">
+    </a>
+  </nav>
+
+  <div *ngIf="this.isNavBarOpen" [ngClass]="{'show':this.isNavBarOpen}" #sidenav id="sidenav">
+   <ul class="side-nav-items">
+    <ng-container *ngFor="let item of sideNavData; let i = index">
+      <app-side-item [dropDownOptions]="item.options" [showDropdownPosition]="i" [ContainerTitle]="item.title" [ContainerId]="item.id"></app-side-item>
+    </ng-container>
+
+    
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div *ngIf="isTable" class="tbody" [ngClass]="{ TableWidth100: graphName == 'Vaccination' }">
+  <ng-container *ngFor="let row of tablesData">
+    <div class="row">
+      <div [ngClass]="getNgClassHeight()" class="cell fontWeight400">
+        <div class="color" [ngClass]="getNgClassColor(row, 2)">
+          {{ row.id }}
+        </div>
+      </div>
+      <div [ngClass]="getNgClassHeight()" class="cell fontWeight400">
+        {{ row.name }}
+      </div>
+      <div [ngClass]="getNgClassHeight()" class="cell fontWeight400">
+        {{ row.age }}
+
+        <div
+          *ngIf="!isSmallColumns"
+          class="squre-gold"
+          [ngClass]="{ 'solomon-rec': isDarkModeActive }"
+        ></div>
+      </div>
+      <div [ngClass]="getNgClassHeight()" class="cell fontWeight400">
+        {{ row.email }}
+        <div
+          *ngIf="!isSmallColumns"
+          class="squre-Cyan"
+          [ngClass]="{ 'cync-rec': isDarkModeActive }"
+        ></div>
+      </div>
+
+      <div [ngClass]="getNgClassHeight()" class="cell weight">
+        <div [ngClass]="getNgClassColor(row, 1)">
+          {{ row.phone }}
+        </div>
+      </div>
+      <div [ngClass]="getNgClassHeight()" class="cell weight">
+        {{ row.address }}
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,38 @@
+<div class="container {{ ClassTitleContainer }}">
+  <div class="title">{{ TopTitle }}</div>
+</div>
+
+<div class="graph-container">
+  <div
+    *ngIf="arrayOfVisualizationObjects && arrayOfVisualizationObjects.length"
+  >
+    <app-generic-table
+      *ngFor="let object of arrayOfVisualizationObjects"
+      [title]="object?.title"
+      [graphName]="object?.graphName || ''"
+      [textDownGraph]="object?.textDownGraph"
+      [selectedOption]="object?.selectedOption"
+      [textAboveGraph]="object?.textAboveGraph"
+      [ClassTextAboveGraph]="object?.ClassTextAboveGraph"
+      [optionObj]="object?.optionObj"
+      [graphSize]="object?.graphSize || ''"
+      [options]="object?.options"
+      [isTable]="object?.isTable"
+      [tablesData]="object?.tablesData"
+      [selectBoxId]="object?.selectBoxId"
+      [tableHeaderId]="object?.tableHeaderId"
+      [classContainer]="object?.classContainer"
+      [classTable]="object?.classTable || 'table'"
+    ></app-generic-table>
+  </div>
+  <div class="container-for-link">
+    <ng-container *ngFor="let link of linksListData">
+      <app-links-list
+        [pictureClass]="link.pictureClass"
+        [link]="link.link"
+        [title]="link.title"
+        [description]="link.description"
+      ></app-links-list>
+    </ng-container>
+  </div>
+</div>

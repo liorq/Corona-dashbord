@@ -1,0 +1,38 @@
+<div class="container">
+  <div
+    *ngFor="let data of dataToDisplay; let i = index"
+    [ngClass]="{ 'background-dark-mode': isDarkModeActive }"
+    class="card"
+    [id]="data.id"
+  >
+    <app-card-header
+      [id]="data.id"
+      [isDarkModeActive]="isDarkModeActive"
+      [text]="data.title"
+      [openWindowsIIcon]="openWindowsIIcon[i]"
+    ></app-card-header>
+
+    <app-card-line
+      id="{{ data?.idBigNumber }}"
+      *ngIf="data.bigNumber"
+      [classNum]="'bigNumber'"
+      [num]="data.bigNumber"
+    ></app-card-line>
+
+    <div *ngIf="data?.isCircleNeeded" class="circle red-1"></div>
+    <div *ngIf="data?.isCircleNeeded" class="circle red-2"></div>
+    <div *ngIf="data?.isCircleNeeded" class="circle yellow"></div>
+
+    <div class="container-big-lines">
+      <ng-container *ngFor="let item of data.subLineObjects">
+        <app-card-line
+          [classContainer]="item.classContainer"
+          [classNum]="item.classNum"
+          [classText]="item.classText"
+          [num]="item.num"
+          [text]="item.text"
+        ></app-card-line>
+      </ng-container>
+    </div>
+  </div>
+</div>

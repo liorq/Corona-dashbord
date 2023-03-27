@@ -1,0 +1,23 @@
+
+
+.container {
+  display: flex;
+}
+
+app-table-header-title{
+  flex-basis: calc(100% / 6); /* each component takes up 1/6 of the container width */
+  max-width: calc(100% / 6); /* optional maximum width for each component */
+}
+.basic-lavender{
+  background: #e6f1f3;
+}
+.flex-row-reverse{
+  flex-direction: row-reverse;
+}
+
+
+
+#tableHeaderId1{
+  flex-direction: row-reverse;
+
+}

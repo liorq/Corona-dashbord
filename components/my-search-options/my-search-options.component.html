@@ -1,0 +1,30 @@
+<ul *ngIf="dropdownVisible" [ngClass]="InputClass"  >
+  <div class="search-input">
+    <div  class="x-input" [ngClass]="{'x-input-dark':isDarkModeActive}" *ngIf="this.searchText.length>0" (click)="this.searchText=''" ></div>
+    <input
+      class="input"
+      type="text"
+      [ngClass]="{'deep-blue-option': isDarkModeActive}"
+
+      placeholder="חיפוש לפי ישוב"
+      [(ngModel)]="searchText"
+      (input)="SearchHandler()"
+      (ngModelChange)="SearchHandler()"
+      (click)="stopPropagation($event)"
+    />
+    <div  class="search-results" *ngIf="showResults&&this.searchText.length!=0">
+      <ul >
+        <li
+          *ngFor="let item of this.filteredData"
+          (click)="handleResultSelection(item,$event)"
+        >
+         <div (click)="SearchHandler()"
+          >{{ item.address}}</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <button  [ngClass]="{'deep-blue-btn': isDarkModeActive}" class="btnSelect" (click)="confirmSelectHandler('ok')">אישור</button>
+  <button [ngClass]="{'deep-blue-btn': isDarkModeActive}" class="btnSelect" (click)="confirmSelectHandler('no')">ביטול</button>
+</ul>

@@ -1,0 +1,47 @@
+<ul
+  class="options-list"
+  [ngClass]="{ 'deep-blue-option': isDarkModeActive }"
+  [hidden]="!dropdownVisible"
+>
+  <li *ngFor="let option of options">
+    <div>{{ option?.label }}</div>
+    <ul>
+      <li *ngFor="let innerOption of option">
+        <div (click)="eventStopProp($event)" class="option-label">
+          <input
+            *ngIf="innerOption?.isRadioBtnNeeded"
+            (click)="eventStopProp($event)"
+            required
+            type="radio"
+            [value]="innerOption?.label"
+            [name]="innerOption?.name"
+            class="option-button"
+            [(ngModel)]="selectedOptions[innerOption?.name]"
+            [checked]="selectedOptions[innerOption?.name] === innerOption.label"
+          />
+          <div
+            [class]="innerOption?.isRadioBtnNeeded ? 'text-options' : 'time'"
+          >
+            {{ innerOption?.label }}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </li>
+  <div id="{{ 'btnId' + graphName }}" class="btns-container">
+    <button
+      class="btnSelect"
+      (click)="updateGraphRelatedSubjects()"
+      [ngClass]="ngClassForBtns"
+    >
+      ביטול
+    </button>
+    <button
+      class="btnSelect"
+      (click)="updateSelectedTimePeriodHandler()"
+      [ngClass]="ngClassForBtns"
+    >
+      אישור
+    </button>
+  </div>
+</ul>

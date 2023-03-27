@@ -1,0 +1,11 @@
+<div id="container" class="container">
+  <a
+    class="para"
+    *ngFor="let page of pages; let i = index"
+    (click)="scrollToClickedComponent(page)"
+    [ngClass]="{ 'white-background': this.componentNameActive === page }"
+    id="{{page}}"
+    >{{ page }}</a
+  >
+</div>
+

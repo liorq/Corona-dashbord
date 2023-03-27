@@ -1,0 +1,454 @@
+.i-icon {
+  background: url("../../../assets/images/i-icon1.png") no-repeat;
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+  cursor: pointer;
+}
+.card {
+  text-align: right;
+  height: 184px;
+  width: 45vw;
+  background: white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+ /* overflow: hidden; */
+  position: relative;
+
+  -webkit-box-shadow: 5px 5px 48px -5px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 48px -5px rgba(0, 0, 0, 0.15);
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 7px;
+
+}
+
+.title-container {
+  position: absolute;
+  top: 12px;
+  right: 11px;
+  display: flex;
+  justify-content: end;
+  font-weight: 700;
+  font-size: 14.4px;
+  gap: 8px;
+}
+.bigger-num{
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.bigNumber {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.littleNumber {
+  margin-left: 5px;
+  font-size: 12.8px;
+  font-weight: 700 !important;
+}
+.littleLine {
+  font-size: 12px;
+  margin-left: 5px;
+}
+.container-little-line {
+  display: flex;
+  position: absolute;
+  top: 65px;
+  right: 10px;
+}
+.container-little-line-2 {
+  display: flex;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+}
+.container-little-line-3 {
+  position: absolute;
+  top: 98px;
+  right: 10px;
+}
+.container-5-line {
+  display: flex;
+  justify-content: center;
+  font-size: 12.8px;
+}
+.line5 {
+  font-size: 14.4px;
+}
+.container-3 {
+  display: flex;
+  justify-content: flex-end;
+}
+.container-5-line-little {
+  display: flex;
+}
+.container-5-line {
+  height: 29px;
+  width: fit-content;
+}
+.container-big-lines {
+  display: flex;
+  width: 125px;
+  height: 142px;
+  flex-wrap: wrap;
+  text-align: right;
+  position: absolute;
+  top: 36px;
+  right: 10px;
+  justify-content: right;
+}
+.container-1-line-b{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  top: 50px;
+  flex-direction: row-reverse;
+
+}
+
+.container-1-line-a{
+  width: fit-content;
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  bottom: 43px;
+}
+.container-2-line-a{
+  width: fit-content;
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  top: 50px;
+}
+
+.container-3-line-a{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  top: 29px;
+  right: 8px;
+}
+.container-3-line-b{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  top:20px;
+  right: 8px;
+
+}
+.container-3-line-c{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  top: 10px;
+  right: 8px;
+
+}
+.container-3-line-d{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  top: 10px;
+}
+.container-3-line-e{
+  width: fit-content;
+  display: flex;
+  position: relative;
+}
+
+
+
+.container-6-line-a{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  position: relative;
+  top:45px;
+  width: 178px;
+
+
+}
+
+#idBigNumber1{
+  position: relative;
+  top: 15px;
+}
+.container-6-line-b{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  position: relative;
+  bottom: 5px;
+  width: 178px;
+}
+.container-7-line-a{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  position: relative;
+  top: 33px;
+  width: 178px;
+}
+.container-8-line-a{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  position: relative;
+  top: 33px;
+  width: 178px;
+}
+.container-9-line-a{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  position: relative;
+  top: 33px;
+  width: 178px;
+}
+.container-10-line-a{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  position: relative;
+  top: 33px;
+  width: 178px;
+}
+.container-10-line-b{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  position: relative;
+  bottom: 15px;
+  width: 178px;
+}
+.line5 {
+  margin-left: 10px;
+}
+
+.container-little-line3{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+#c6 .container-little-line-2 {
+  position: absolute;
+}
+
+#c1 .container-little-line,
+#c1 .container-little-line-2,
+#c2 .container-little-line {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#c6 .container-little-line {
+  top: 79px;
+  flex-direction: row-reverse;
+}
+#c6 .container-little-line-2 {
+  top: 108px;
+  flex-direction: row-reverse;
+}
+#c6 app-card-header .title-container div {
+max-width: 100px;
+}
+#c6 .bigNumber {
+  position: absolute;
+  top: 55px;
+}
+
+#c2 {
+}
+#c3 {
+}
+#c4 {
+}
+#c5 {
+}
+#c6 {
+}
+#c7 .container-little-line {
+  flex-direction: row-reverse;
+}
+#c8 .container-little-line {
+  flex-direction: row-reverse;
+}
+#c9 .container-little-line {
+  flex-direction: row-reverse;
+}
+#c10 .container-little-line {
+  flex-direction: row-reverse;
+}
+
+#c10 .container-little-line-2 {
+  flex-direction: row-reverse;
+}
+
+.my-list {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.circle {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: black;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.yellow {
+  background: #e6b957;
+  position: absolute;
+  right: -5px;
+  top: 105px;
+}
+
+
+
+.red-2 {
+  background: #e21d48;
+  margin-left: 10px;
+  position: absolute;
+  right: -5px;
+  top: 85px;
+}
+.red-1 {
+  background: #e21d48;
+  margin-left: 10px;
+  position: absolute;
+  right: -5px;
+  top: 66px;
+
+}
+.margin {
+  margin-right: 30px;
+}
+.medium-num {
+  font-size: 14.4px;
+  font-weight: 600;
+}
+@media screen and (min-width: 769px) {
+  .container {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+}
+.text-i-icon {
+  display: none;
+}
+.i-icon {
+  position: relative;
+}
+.i-icon-dark {
+  background: url("../../../assets/images/i-icon1-dark.png") no-repeat;
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.dot-dark-mode {
+  width: 2.81px;
+  height: 2.81px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.background-dark-mode {
+  background: hsl(205, 26%, 30%);
+  color: white;
+}
+
+.text-i-icon {
+  display: none;
+}
+.i-icon-dark {
+  background: url("../../../assets/images/i-icon1-dark.png") no-repeat;
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+  cursor: pointer;
+}
+.i-icon-dark:hover + .text-i-icon,
+.text-i-icon:hover {
+  display: block;
+  position: absolute;
+  z-index: 1000;
+}
+.i-icon:hover + .text-i-icon,
+.text-i-icon:hover {
+  display: block;
+  position: absolute;
+  z-index: 1000;
+}
+.text-i-icon-container {
+  padding: 15px;
+  border: 1px solid gray;
+  width: 99px;
+  height: auto;
+  background: white;
+  border-radius: 10px;
+  font-size: 12px;
+  color: gray;
+  font-weight: 400;
+  z-index: 1000;
+
+}
+@media  (min-width: 760px){
+.container{
+  padding-left: 14px;
+  padding-right: 19px;
+}
+}
+@media screen and (min-width: 760px) and (max-width: 910px) {
+  /* app-card-line{
+    position: relative;
+    top: 20px;
+  } */
+  .bigNumber{
+    top: 48px;
+  }
+  .container-big-lines{
+    top:43px;
+  }
+
+}
+.card{
+  position: relative;
+}
+@media (min-width:769px){
+  .card{
+    clip-path: inset( -100vw -100vw -100vw 0 );
+  z-index: 1;
+
+  }
+  .container-6-line-b{
+    width: fit-content;
+    bottom: -12px;
+  }
+  .container-6-line-a{
+    width: fit-content;
+
+  }
+}
+
+

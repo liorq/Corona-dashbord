@@ -1,0 +1,14 @@
+
+  <li id="{{this.ContainerId}}" class="side-item dropdown borderNone" (click)="openOptions(showDropdownPosition)" >
+  <div class="container-title"> <a>{{this.ContainerTitle}}</a>
+    <div [ngClass]="{'rotate':this.showDropdown[showDropdownPosition]}" class="half-rectangele"></div>
+</div>
+    <ul   class="dropdown-items" [ngClass]="{ 'openOptions': this.showDropdown[this.showDropdownPosition] }">
+      <li class="dropdown-item" *ngFor="let item of dropDownOptions" >
+        <a [id]="item">{{item}}</a>
+        <div [id]="'rec'+item" [ngClass]="{'rotate':this.showDropdown[showDropdownPosition]}" class="half-rectangele"></div>
+
+      </li>
+    </ul>
+  </li>
+

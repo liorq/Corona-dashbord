@@ -1,0 +1,13 @@
+<div id="scrolling-area" class="scrolling-area">
+  <div id="scrolling-element-inside" class="scrolling-element-inside">
+    <div class="ltr">
+      <div class="sticky-header">
+        <app-header class="blue-font"></app-header>
+        <app-anchor-list
+          [ngClass]="{ opacity: this.isNavBarOpen }"
+        ></app-anchor-list>
+      </div>
+      <app-main></app-main>
+    </div>
+  </div>
+</div>

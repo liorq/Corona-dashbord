@@ -1,0 +1,18 @@
+
+
+<div     *ngIf="isTable" id="{{tableHeaderId}}" class="row header">
+  <ng-container *ngFor="let header of headers; let i = index">
+    <app-table-header-title
+      [tableTitleId]="tableHeaderId"
+      [ContainerNgClass]="header.ContainerNgClass"
+      [graphName]="header.graphName"
+      [ContainerClass]="header.ContainerClass"
+      [text]="header.text"
+      (click)="sortTableByColumnHandler(header.sortField)"
+      [rectangleNgClass]="{
+        'arrow-down': clickCounterObj[header.sortField] == 1,
+        'arrow-up': clickCounterObj[header.sortField] == 2
+      }">
+    </app-table-header-title>
+  </ng-container>
+</div>

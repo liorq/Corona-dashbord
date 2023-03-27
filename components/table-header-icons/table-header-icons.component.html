@@ -1,0 +1,20 @@
+<div class="little-container">
+  <app-info-icon></app-info-icon>
+  <span class="title">{{ title }}</span>
+  <div
+    *ngIf="!isTable && this.graphName.length > 0"
+    class="select-box-container"
+    (click)="toggleDropdown()"
+  >
+    <app-select-box
+      [selectedOption]="selectedOption"
+      [dropdownVisible]="dropdownVisible"
+      [graphName]="graphName"
+    ></app-select-box>
+    <app-my-options
+      [graphName]="graphName"
+      [dropdownVisible]="dropdownVisible"
+      [options]="options"
+    ></app-my-options>
+  </div>
+</div>

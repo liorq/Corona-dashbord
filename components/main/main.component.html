@@ -1,0 +1,62 @@
+<div
+  class="container blue-font"
+  [ngClass]="{
+    'dark-mode': this.isDarkModeActive,
+    opacity: this.isNavBarOpen
+  }"
+>
+  <app-view-on class="components" id="view-on"></app-view-on>
+
+  <app-summary-of7-days id="Summaryoflast7daysComponent"></app-summary-of7-days>
+
+  <app-major-indicators
+    class="components"
+    id="major-indicators-component"
+  ></app-major-indicators>
+
+  <app-indices-of-general-morbidity
+    id="indices-of-general-morbidity-component"
+    class="components"
+  ></app-indices-of-general-morbidity>
+
+  <app-morbidity-and-hospitalizations
+    id="morbidity-and-hospitalizations-component"
+    class="components"
+  ></app-morbidity-and-hospitalizations>
+
+  <app-morbidity-from-abroad
+    id="morbidity-from-abroad-component"
+    class="components"
+  ></app-morbidity-from-abroad>
+
+  <app-effect-of-vaccination-on-morbidity
+    id="effect-of-vaccination-on-morbidity-component"
+    class="components"
+  ></app-effect-of-vaccination-on-morbidity>
+
+  <app-deads id="deads-component" class="components"></app-deads>
+
+  <app-tests id="tests-component" class="components"></app-tests>
+
+  <app-further-investigations
+    id="further-investigations-component"
+    class="components"
+  ></app-further-investigations>
+
+  <app-recurrent-morbidity-and-recovery
+    id="recurrent-morbidity-and-recovery-component"
+    class="components"
+  ></app-recurrent-morbidity-and-recovery>
+
+  <app-vaccination-of-the-population
+    id="vaccination-of-the-population-component"
+    class="components"
+  ></app-vaccination-of-the-population>
+
+  <app-lights-in-settlements
+    id="lights-in-settlements-component"
+    class="components"
+  ></app-lights-in-settlements>
+
+  <div class="empty-div"></div>
+</div>
