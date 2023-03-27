@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {  arrayOfVisualizationObjects2 } from 'src/app/data/app.data-visualization';
+import {  indicesObj } from 'src/app/data/app.data-visualization';
 
 @Component({
   selector: 'app-indices-of-general-morbidity',
@@ -10,7 +10,8 @@ import {  arrayOfVisualizationObjects2 } from 'src/app/data/app.data-visualizati
   ],
 })
 export class IndicesOfGeneralMorbidityComponent {
-  @Input()arrayOfVisualizationObjects=arrayOfVisualizationObjects2;
+  /////indicesObj
+  @Input()visObjsArray=indicesObj;
 
 
 }

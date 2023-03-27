@@ -12,6 +12,6 @@ import { abroadObj } from 'src/app/data/app.data-visualization';
 })
 export class MorbidityFromAbroadComponent {
    links = abroadLinks;
-  @Input()arrayOfVisualizationObjects=abroadObj;
+  @Input()visObjsArray=abroadObj;
 
 }

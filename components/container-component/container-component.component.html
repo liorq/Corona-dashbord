@@ -4,10 +4,10 @@
 
 <div class="graph-container">
   <div
-    *ngIf="arrayOfVisualizationObjects && arrayOfVisualizationObjects.length"
+    *ngIf="visObjsArray && visObjsArray.length"
   >
     <app-generic-table
-      *ngFor="let object of arrayOfVisualizationObjects"
+      *ngFor="let object of visObjsArray"
       [title]="object?.title"
       [graphName]="object?.graphName || ''"
       [textDownGraph]="object?.textDownGraph"

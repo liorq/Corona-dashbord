@@ -15,7 +15,7 @@ export class DeadsComponent implements OnInit {
   isDarkModeActive?: boolean;
   selectedOption: string='';
   isDropDownVisible?: boolean;
-  @Input()arrayOfVisualizationObjects=deadsObj;
+  @Input()visObjsArray=deadsObj;
 
   constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}
 

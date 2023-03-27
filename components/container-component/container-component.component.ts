@@ -7,11 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ComponentContainer implements OnInit{
   TopTitle:string='';
-@Input()arrayOfVisualizationObjects:any[]=[];
+@Input()visObjsArray:any[]=[];
 @Input()linksListData:any[]=[]
 ClassTitleContainer:string=''
 ngOnInit(): void {
-  this.TopTitle=this.arrayOfVisualizationObjects[0]?.TopTitle;
-  this.ClassTitleContainer=this.arrayOfVisualizationObjects[0]?.ClassTitleContainer;
+  this.TopTitle=this.visObjsArray[0]?.TopTitle;
+  this.ClassTitleContainer=this.visObjsArray[0]?.ClassTitleContainer;
 }
 }

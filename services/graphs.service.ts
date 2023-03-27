@@ -32,7 +32,7 @@ export class GraphsService {
     selectedOption[Option] = componentObj.selectedOption = periodOfTimeMap[newTimePeriods[graphField]];
     componentObj.timePeriodsInDays = newTimePeriods?.[graphField];
     componentObj.option = optionFunctions[Option](componentObj.timePeriodsInDays, componentObj.isDarkModeActive);
-    componentObj.arrayOfVisualizationObjects[position].optionObj= componentObj.option
+    componentObj.visObjsArray[position].optionObj= componentObj.option
 
     this.selectedOption.next(selectedOption);
 }
@@ -40,7 +40,7 @@ export class GraphsService {
   updateDataBasedOnDarkModeActive(componentObj: MyComponentGraphsType,newStatus:boolean,Option:string,position:number){
     componentObj.isDarkModeActive = newStatus;
     componentObj.option = optionFunctions[Option](componentObj.timePeriodsInDays, componentObj.isDarkModeActive);
-    componentObj.arrayOfVisualizationObjects[position].optionObj= componentObj.option
+    componentObj.visObjsArray[position].optionObj= componentObj.option
   }
 
   initializeGraph(componentObj:DataVisualGenericComponent){
@@ -108,7 +108,7 @@ export class GraphsService {
       });
     });
 
-    componentObj.arrayOfVisualizationObjects[1].optionObj && myChart.setOption( componentObj.arrayOfVisualizationObjects[1].optionObj);
+    componentObj.visObjsArray[1].optionObj && myChart.setOption( componentObj.visObjsArray[1].optionObj);
     componentObj.chart = myChart;
   }
   updateSelectedTimePeriodHandler(componentObj:MyOptionsComponent) {

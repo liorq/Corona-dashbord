@@ -7,6 +7,6 @@ import { recovObj } from 'src/app/data/app.data-visualization';
   styleUrls: ['./recurrent-morbidity-and-recovery.component.css','../deads/deads.component.css']
 })
 export class RecurrentMorbidityAndRecoveryComponent {
-  @Input()arrayOfVisualizationObjects=recovObj;
+  @Input()visObjsArray=recovObj;
 
 }

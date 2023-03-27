@@ -14,7 +14,7 @@ export class EffectOfVaccinationOnMorbidityComponent {
   timePeriodsInDays: number = 25;
   isDarkModeActive?: boolean;
   selectedOption: string='';
-  @Input()arrayOfVisualizationObjects=vaccEffObj;
+  @Input()visObjsArray=vaccEffObj;
 
 
   constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}

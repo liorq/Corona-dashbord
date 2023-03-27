@@ -3,7 +3,7 @@ import { getFurthersGraph } from 'src/app/data/app.graphData';
 import { CoronaService } from 'src/app/services/corona.service';
 import { FurtherLinks } from 'src/app/data/app.arrays';
 import { GraphsService } from 'src/app/services/graphs.service';
-import { arrayOfVisualizationObjects8 } from 'src/app/data/app.data-visualization';
+import { FurtherObj } from 'src/app/data/app.data-visualization';
 
 @Component({
   selector: 'app-further-investigations',
@@ -19,7 +19,8 @@ export class FurtherInvestigationsComponent {
   isDarkModeActive?: boolean;
   selectedOption: string='';
   linksData = FurtherLinks;
-  @Input()arrayOfVisualizationObjects=arrayOfVisualizationObjects8;
+  ////FurtherObj
+  @Input()visObjsArray=FurtherObj;
 
   constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}
   ngOnInit(): void {

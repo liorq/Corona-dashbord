@@ -1,7 +1,7 @@
 import { options, options2, options3, tableData1, tableData2 } from "./app.arrays";
 import { getDeathsGraph, getFurthersGraph, getTestsGraph, getVaccGraph } from "./app.graphData";
 
-export const arrayOfVisualizationObjects = [
+export const majorIndicatorsObj = [
   {
     ClassTitleContainer:'flex-end',
     TopTitle: "מדדים מרכזיים",
@@ -65,7 +65,7 @@ export const arrayOfVisualizationObjects = [
 
 
 
-export const arrayOfVisualizationObjects2 = [
+export const indicesObj = [
   {
     TopTitle: 'מדדי תחלואה כללית',
     isTable: false,
@@ -115,7 +115,7 @@ export const arrayOfVisualizationObjects2 = [
 
 
 
-export const arrayOfVisualizationObjects3 = [
+export const hospitObj = [
   {
     TopTitle: 'תחלואה ואשפוזי ילדים',
     isTable: false,
@@ -474,7 +474,7 @@ export const deadsObj = [
 
 ];
 
-export const arrayOfVisualizationObjects8 = [
+export const FurtherObj = [
 
   {
     TopTitle: 'תחקורים נוספים',
@@ -547,7 +547,7 @@ export const arrayOfVisualizationObjects8 = [
 
 
 
-export const arrayOfVisualizationObjects9 = [
+export const testObj = [
   {
     TopTitle: 'בדיקות',
     isTable: undefined,

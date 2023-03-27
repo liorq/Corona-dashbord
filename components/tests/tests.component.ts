@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
 import {testLinks} from 'src/app/data/app.arrays';
-import { arrayOfVisualizationObjects9 } from 'src/app/data/app.data-visualization';
+import { testObj } from 'src/app/data/app.data-visualization';
 ///dont remove
 import { getTestsGraph } from 'src/app/data/app.graphData';
 import { CoronaService } from 'src/app/services/corona.service';
@@ -19,7 +19,8 @@ export class TestsComponent implements AfterViewInit,OnInit {
   links = testLinks;
   ////testLinks
   selectedOption?: string;
-  @Input()arrayOfVisualizationObjects=arrayOfVisualizationObjects9;
+  ///testObj
+  @Input()visObjsArray=testObj;
 
   public option?: {} ;
 

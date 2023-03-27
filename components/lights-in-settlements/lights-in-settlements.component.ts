@@ -13,6 +13,6 @@ import {  lightsObj } from 'src/app/data/app.data-visualization';
 export class LightsInSettlementsComponent {
   linksListData = lightslinks;
 
-  @Input()arrayOfVisualizationObjects=lightsObj;
+  @Input()visObjsArray=lightsObj;
 
 }

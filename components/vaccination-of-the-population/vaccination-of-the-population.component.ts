@@ -12,6 +12,6 @@ import { VaccPopObj } from 'src/app/data/app.data-visualization';
 })
 export class VaccinationOfThePopulationComponent {
   links = VaccLinks;
-  @Input()arrayOfVisualizationObjects=VaccPopObj;
+  @Input()visObjsArray=VaccPopObj;
 
 }

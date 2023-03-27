@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { titles1 } from 'src/app/data/app.arrays';
-import { arrayOfVisualizationObjects3 } from 'src/app/data/app.data-visualization';
+import { hospitObj } from 'src/app/data/app.data-visualization';
 
 @Component({
   selector: 'app-morbidity-and-hospitalizations',
@@ -11,7 +10,8 @@ import { arrayOfVisualizationObjects3 } from 'src/app/data/app.data-visualizatio
   ],
 })
 export class MorbidityAndHospitalizationsComponent {
-  @Input()arrayOfVisualizationObjects=arrayOfVisualizationObjects3;
+  ////hospitObj
+  @Input()visObjsArray=hospitObj;
 
   // titles = titles1;
 }
