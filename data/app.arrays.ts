@@ -224,7 +224,10 @@ export const emphasisStyle = {
     shadowColor: 'rgba(0,0,0,0.3)',
   },
 };
-export const tableData1: any = [
+
+
+/////lightsTable
+export const lightsTable: any = [
   { id: 34, name: '10%', age: '24%', email: 7.2, phone: 7.6, address: 'אילת' },
   {
     id: 63,
@@ -252,7 +255,7 @@ export const tableData1: any = [
   },
 ];
 
-export const tableData2: any = [
+export const VaccTable: any = [
   {
     id: 8,
     name: 'אין מידע',

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MySearchOptionsComponent } from '../components/my-search-options/my-search-options.component';
-import { tableData1, tableData2 } from '../data/app.arrays';
+import { lightsTable, VaccTable } from '../data/app.arrays';
 import { graphNameObj } from '../data/app.objects';
 import { TableHeaderComponent } from '../components/table-header/table-header.component';
 
@@ -12,7 +12,7 @@ export class TablesService {
   constructor() { }
   SearchHandler(componentObj:MySearchOptionsComponent) {
     this.resetTableData(componentObj);
-    componentObj.tablesData = componentObj.graphName == 'lights' ? tableData1 : tableData2;
+    componentObj.tablesData = componentObj.graphName == 'lights' ? lightsTable : VaccTable;
     const newArray =  this.getFilteredCites(componentObj);
 
     if (componentObj.searchText.length > 0&&newArray?.length > 0)
@@ -39,8 +39,8 @@ export class TablesService {
   resetTableData(componentObj:MySearchOptionsComponent) {
     if (componentObj.searchText == '') {
       componentObj.coronaSvc.filteredData.next({
-        firstTable: tableData1,
-        secondTable: tableData2,
+        firstTable: lightsTable,
+        secondTable: VaccTable,
       });
     }
   }

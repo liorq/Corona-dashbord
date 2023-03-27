@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
-import { tableData1, tableData2 } from '../data/app.arrays';
+import { lightsTable, VaccTable } from '../data/app.arrays';
 
 @Injectable({
   providedIn: 'root',
@@ -18,8 +18,8 @@ export class CoronaService {
     fourGraph: 720,
   });
   filteredData = new BehaviorSubject<{ [key: string]: [] }>({
-    firstTable: tableData1,
-    secondTable: tableData2,
+    firstTable: lightsTable,
+    secondTable: VaccTable,
   });
   isDropDownVisible = new BehaviorSubject<{ [key: string]: boolean }>({
     firstGraph: false,

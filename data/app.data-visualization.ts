@@ -1,4 +1,4 @@
-import { options, FurtherOptions, VaccOptions, tableData1, tableData2 } from "./app.arrays";
+import { options, FurtherOptions, VaccOptions, lightsTable, VaccTable } from "./app.arrays";
 import { getDeathsGraph, getFurthersGraph, getTestsGraph, getVaccGraph } from "./app.graphData";
 
 export const majorIndicatorsObj = [
@@ -729,7 +729,7 @@ export const VaccPopObj = [
 
     isTable: true,
     title: 'התחסנות לפי ישובים',
-    tablesData: tableData2,
+    tablesData: VaccTable,
     graphName: 'Vaccination',
     selectBoxId: "selectBoxId2",
     selectedOption: 'כלל הישובים',
@@ -747,7 +747,7 @@ export const lightsObj = [
 
     isTable: true,
     title: 'תוכנית הרמזור',
-    tablesData: tableData1,
+    tablesData: lightsTable,
     graphName: 'lights',
     selectBoxId: "selectBoxId1",
     selectedOption: 'כלל הישובים',
