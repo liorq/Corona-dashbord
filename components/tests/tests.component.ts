@@ -3,7 +3,7 @@ import * as echarts from 'echarts';
 import { emphasisStyle,links3} from 'src/app/data/app.arrays';
 import { arrayOfVisualizationObjects9 } from 'src/app/data/app.data-visualization';
 ///dont remove
-import { secondOption } from 'src/app/data/app.graphData';
+import { getTestsGraph } from 'src/app/data/app.graphData';
 import { CoronaService } from 'src/app/services/corona.service';
 import { GraphsService } from 'src/app/services/graphs.service';
 

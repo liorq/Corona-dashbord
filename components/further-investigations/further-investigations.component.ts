@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { fourOption } from 'src/app/data/app.graphData';
+import { getFurthersGraph } from 'src/app/data/app.graphData';
 import { CoronaService } from 'src/app/services/corona.service';
 import { linksData, options2 } from 'src/app/data/app.arrays';
 import { GraphsService } from 'src/app/services/graphs.service';
@@ -14,7 +14,7 @@ import { arrayOfVisualizationObjects8 } from 'src/app/data/app.data-visualizatio
   ],
 })
 export class FurtherInvestigationsComponent {
-  option?: echarts.EChartsOption | any = fourOption(25, false);
+  option?: echarts.EChartsOption | any = getFurthersGraph(25, false);
   timePeriodsInDays: number = 25;
   isDarkModeActive?: boolean;
   selectedOption: string='';

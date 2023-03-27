@@ -1,6 +1,6 @@
 import { emphasisStyle } from "./app.arrays";
-
-export function firstOption(timePeriod?: number, isDarkMode?: boolean) {
+///getDeathsGraph
+export function getDeathsGraph(timePeriod?: number, isDarkMode?: boolean) {
   let colors: string[] = !isDarkMode
     ? ['#237d7d', '#ff9482', '#EE6666', '#595d62', '#fff', '#878a96']
     : ['#9be985', '#fcc537', '#ff9482', '#595d62', '#384f5f', '#fff'];
@@ -154,8 +154,8 @@ function generateDataForDays(
 
   return [xAxisData, pcrData, antigenData, movingAvgData];
 }
-
-export function secondOption(
+////getTestsGraph
+export function getTestsGraph(
   timePeriod?: number,
   isDarkMode?: boolean
 ) {
@@ -254,7 +254,8 @@ export function secondOption(
     ],
   };
 }
-export function threeOption(timePeriod?: number, isDarkMode?: boolean) {
+///getVaccGraph
+export function getVaccGraph(timePeriod?: number, isDarkMode?: boolean) {
   const firstFakeData = generateDataForPercents(timePeriod || 25);
   const secondFakeData = generateDataForPercents(timePeriod || 25);
   const thirdFakeData = generateDataForPercents(timePeriod || 25);
@@ -394,10 +395,10 @@ export function threeOption(timePeriod?: number, isDarkMode?: boolean) {
     ],
   };
 }
-
-export function fourOption(timePeriod?: number, isDarkMode?: boolean) {
-  const positiveData = generateDataForFourOption(30, true);
-  const negativeData = generateDataForFourOption(30, false);
+////getFurthersGraph
+export function getFurthersGraph(timePeriod?: number, isDarkMode?: boolean) {
+  const positiveData = generateDataForgetFurthersGraph(30, true);
+  const negativeData = generateDataForgetFurthersGraph(30, false);
 
   let colors: string[] = !isDarkMode
     ? ['#b6ca51', '#50cbfd', '#666']
@@ -521,7 +522,7 @@ export function fourOption(timePeriod?: number, isDarkMode?: boolean) {
     ],
   };
 }
-function generateDataForFourOption(period: number, isPositive: boolean) {
+function generateDataForgetFurthersGraph(period: number, isPositive: boolean) {
   const data = [];
   const startDate = new Date();
   const endDate = new Date();

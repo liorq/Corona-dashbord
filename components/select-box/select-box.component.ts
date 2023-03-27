@@ -20,7 +20,7 @@ export class SelectBoxComponent implements OnInit {
   @Input() RecClass: string = 'center-half-rectangle';
   @Input() RecNgClass?: {};
   @Input() selectBoxId?: string;
-  @Input()theObj?:DataVisualGenericComponent;
+  @Input()obj?:DataVisualGenericComponent;
 
   constructor(    private coronaSvc: CoronaService,
     private graphSvc: GraphsService,) {}

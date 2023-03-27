@@ -2,7 +2,7 @@ import {  Injectable } from '@angular/core';
 import * as echarts from 'echarts';
 import { graphPeriods, optionPeriods, periodOfTimeMap } from '../data/app.arrays';
 ///dont remove!
-import { firstOption,secondOption,threeOption,fourOption } from '../data/app.graphData';
+import { getDeathsGraph,getTestsGraph,getVaccGraph,getFurthersGraph } from '../data/app.graphData';
 import { optionFunctions } from '../data/app.objects';
 import { MyComponentGraphsType } from './app.types';
 import { DataVisualGenericComponent } from '../components/generic-table/generic-table.component';

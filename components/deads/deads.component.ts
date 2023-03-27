@@ -1,9 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
-import { firstOption } from 'src/app/data/app.graphData';
 import { CoronaService } from 'src/app/services/corona.service';
-import { periodOfTimeMap } from 'src/app/data/app.arrays';
-import { optionFunctions } from 'src/app/data/app.objects';
 import { GraphsService } from 'src/app/services/graphs.service';
 import { arrayOfVisualizationObjects7 } from 'src/app/data/app.data-visualization';
 

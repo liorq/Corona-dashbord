@@ -14,8 +14,8 @@ import { TablesService } from 'src/app/services/tables.service';
   ],
 })
 export class TableHeaderComponent implements OnInit {
-  @Input()theObj?:DataVisualGenericComponent;
-  isTable?:boolean=this.theObj?.isTable;
+  @Input()obj?:DataVisualGenericComponent;
+  isTable?:boolean=this.obj?.isTable;
   graphName?: string;
   tablesData?: any = [];
   isDarkModeActive?: boolean;
@@ -26,7 +26,7 @@ export class TableHeaderComponent implements OnInit {
 
   constructor(private coronaSvc: CoronaService,private tablesSvc: TablesService) {}
   ngOnInit(): void {
-    const { graphName, tablesData, isDarkModeActive, tableHeaderId,isTable } = this.theObj ?? {};
+    const { graphName, tablesData, isDarkModeActive, tableHeaderId,isTable } = this.obj ?? {};
     this.graphName = graphName;
     this.tablesData = tablesData ?? [];
     this.isDarkModeActive = isDarkModeActive;

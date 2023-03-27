@@ -1,4 +1,4 @@
-import { firstOption, fourOption, secondOption, threeOption } from "./app.graphData";
+import { getDeathsGraph, getFurthersGraph, getTestsGraph, getVaccGraph } from "./app.graphData";
 
 export const componentNames: any = {
   'מבט על': 'view-on',
@@ -30,10 +30,10 @@ export const graphNameObj: { [key: string]: string } = {
   Vaccination: 'secondTable',
 };
 export const optionFunctions :{[key:string]:Function }= {
-  "1": firstOption,
-  "2": secondOption,
-  "3": threeOption,
-  "4": fourOption,
+  "1": getDeathsGraph,
+  "2": getTestsGraph,
+  "3": getVaccGraph,
+  "4": getFurthersGraph,
 };
 export const graphNumber :{[key:string]:string }= {
   "main": "1",

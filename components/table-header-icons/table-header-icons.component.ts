@@ -8,10 +8,10 @@ import { DataVisualGenericComponent } from '../generic-table/generic-table.compo
   styleUrls: ['../generic-table/generic-table.component.css','./table-header-icons.component.css'],
 })
 export class TableHeaderIconsComponent {
-  @Input()theObj?:DataVisualGenericComponent;
+  @Input()obj?:DataVisualGenericComponent;
 
  options?: string[];
- isTable?: boolean=this.theObj?.isTable;
+ isTable?: boolean=this.obj?.isTable;
  title?: string = '';
  selectedOption?: string = '';
  graphName: string = '';
@@ -19,7 +19,7 @@ export class TableHeaderIconsComponent {
   isDarkModeActive?: boolean;
   constructor(private coronaSvc: CoronaService) {}
   ngOnInit(): void {
-    const { options, isTable, title, selectedOption,graphName } = this.theObj ?? {};
+    const { options, isTable, title, selectedOption,graphName } = this.obj ?? {};
     this.graphName = graphName||"";
     this.options = options ?? [];
     this.isTable = isTable;

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { threeOption } from 'src/app/data/app.graphData';
+import { getVaccGraph } from 'src/app/data/app.graphData';
 import { CoronaService } from 'src/app/services/corona.service';
 import { options3, periodOfTimeMap, titles4 } from 'src/app/data/app.arrays';
 import { GraphsService } from 'src/app/services/graphs.service';
@@ -11,7 +11,7 @@ import { arrayOfVisualizationObjects6 } from 'src/app/data/app.data-visualizatio
   styleUrls: ['./effect-of-vaccination-on-morbidity.component.css'],
 })
 export class EffectOfVaccinationOnMorbidityComponent {
-  option: echarts.EChartsOption | any = threeOption(25, false);
+  option: echarts.EChartsOption | any = getVaccGraph(25, false);
   timePeriodsInDays: number = 25;
   titles = titles4;
   isDarkModeActive?: boolean;

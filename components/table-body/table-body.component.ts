@@ -12,7 +12,7 @@ import { DataVisualGenericComponent } from '../generic-table/generic-table.compo
 })
 export class TableBodyComponent implements OnInit {
 
-  @Input()theObj?:DataVisualGenericComponent;
+  @Input()obj?:DataVisualGenericComponent;
   graphName?: string;
   tablesData?: any[] = [];
   isDarkModeActive?: boolean;
@@ -22,7 +22,7 @@ export class TableBodyComponent implements OnInit {
   isSmallColumns?: {};
   constructor(private coronaSvc: CoronaService) {}
   ngOnInit(): void {
-    const { graphName, tablesData, isDarkModeActive, isTable } = this.theObj ?? {};
+    const { graphName, tablesData, isDarkModeActive, isTable } = this.obj ?? {};
     this.graphName = graphName;
     this.tablesData = tablesData ?? [];
     this.isDarkModeActive = isDarkModeActive;

@@ -11,7 +11,7 @@ import { TablesService } from 'src/app/services/tables.service';
   styleUrls: ['../generic-table/generic-table.component.css','./my-search-options.component.css'],
 })
 export class MySearchOptionsComponent implements OnInit {
-  @Input()theObj?:DataVisualGenericComponent;
+  @Input()obj?:DataVisualGenericComponent;
  graphName?: string;
   @Input() ngClassForBtns?: {};
   @Input() dropdownVisible?: boolean;
@@ -25,7 +25,7 @@ export class MySearchOptionsComponent implements OnInit {
   constructor(public coronaSvc: CoronaService,public TableSvc: TablesService) {}
 
   ngOnInit(): void {
-    const {graphName}=this.theObj??{}
+    const {graphName}=this.obj??{}
     this.graphName=graphName;
     this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;

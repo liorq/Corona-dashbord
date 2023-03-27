@@ -12,7 +12,7 @@ export class GraphBodyComponent implements OnInit{
   isTable: boolean=false;
   graphSize: string='';
   graphName: string='';
-  @Input()theObj?:DataVisualGenericComponent;
+  @Input()obj?:DataVisualGenericComponent;
   isEmptyCard: boolean | undefined;
   isDarkModeActive: boolean | undefined;
   optionObj:any;
@@ -21,7 +21,7 @@ export class GraphBodyComponent implements OnInit{
   constructor(private coronaSvc :CoronaService,private graphSvc:GraphsService){}
 ngOnInit(): void {
 
-  const {isTable,graphName,graphSize,optionObj,chart,resizeTimeoutId}=this.theObj??{};
+  const {isTable,graphName,graphSize,optionObj,chart,resizeTimeoutId}=this.obj??{};
   this.isTable=isTable||false;
   this.graphName=graphName||"";
   this.graphSize=graphSize||""

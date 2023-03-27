@@ -1,7 +1,7 @@
 <div [class.container]="true" [ngClass]="ngClassContainer">
   <div [ngClass]="{'table-darkMode':isDarkModeActive, 'background-dark-mode': isDarkModeActive }" [class]="classTable" >
     <app-table-header-icons
-    [theObj]="this"
+    [obj]="this"
     ></app-table-header-icons>
 
     <app-ellipsis-icon  (click)="toggleShareAndDownload()"></app-ellipsis-icon>
@@ -45,7 +45,7 @@
     ></app-select-box>
 
         <app-my-search-options
-         [theObj]="this"
+         [obj]="this"
           [dropdownVisible]="dropdownVisible"
         ></app-my-search-options>
       </div>
@@ -65,10 +65,10 @@
       ></app-color-squares>
     </div>
     <app-table-header
-    [theObj]="this"
+    [obj]="this"
     ></app-table-header>
     <app-table-body
-    [theObj]="this"
+    [obj]="this"
     ></app-table-body>
   </div>
 </div>

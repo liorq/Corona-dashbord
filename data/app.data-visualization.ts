@@ -1,5 +1,5 @@
 import { options, options2, options3, tableData1, tableData2 } from "./app.arrays";
-import { firstOption, fourOption, secondOption, threeOption } from "./app.graphData";
+import { getDeathsGraph, getFurthersGraph, getTestsGraph, getVaccGraph } from "./app.graphData";
 
 export const arrayOfVisualizationObjects = [
   {
@@ -408,7 +408,7 @@ export const arrayOfVisualizationObjects6 = [
     title: 'חולים פעילים - גיל והתחסנות',
     chart: null,
     resizeTimeoutId: undefined,
-    optionObj: threeOption(25, false),
+    optionObj: getVaccGraph(25, false),
     periodOfTime: 25,
     tablesData: [],
     graphSize: 'width: 100%; height: 325px;',
@@ -435,7 +435,7 @@ export const arrayOfVisualizationObjects7 = [
     title: 'נפטרים יומי',
     chart: null,
     resizeTimeoutId: undefined,
-    optionObj: firstOption(25, false),
+    optionObj: getDeathsGraph(25, false),
     periodOfTime: 25,
     tablesData: [],
     graphSize: 'width: 100%; height: 295px;',
@@ -503,7 +503,7 @@ export const arrayOfVisualizationObjects8 = [
     title: 'פילוח מדדים שונים על פי גיל ומין',
     chart: null,
     resizeTimeoutId: undefined,
-    optionObj: fourOption(25, false),
+    optionObj: getFurthersGraph(25, false),
     periodOfTime: 25,
     tablesData: [],
     graphSize: 'width:95%; height: 290px;',
@@ -615,7 +615,7 @@ export const arrayOfVisualizationObjects9 = [
     title: 'מספר בדיקות קורונה - יומי',
     chart: null,
     resizeTimeoutId: undefined,
-    optionObj: secondOption(25, false),
+    optionObj: getTestsGraph(25, false),
     periodOfTime: 25,
     tablesData: [],
     graphSize: 'width: 80%; height: 240px;',
