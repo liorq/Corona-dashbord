@@ -1,1 +1,18 @@
-<p>option works!</p>
+<div (click)="eventStopProp($event)" class="option-label">
+  <input
+    *ngIf="innerOption?.isRadioBtnNeeded"
+    (click)="eventStopProp($event)"
+    required
+    type="radio"
+    [value]="innerOption?.label"
+    [name]="innerOption?.name"
+    class="option-button"
+    [(ngModel)]="selectedOptions[innerOption?.name]"
+    [checked]="selectedOptions[innerOption?.name] === innerOption.label"
+  />
+  <div
+    [class]="innerOption?.isRadioBtnNeeded ? 'text-options' : 'time'"
+  >
+    {{ innerOption?.label }}
+  </div>
+</div>
