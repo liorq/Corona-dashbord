@@ -13,9 +13,7 @@ import { arrayOfVisualizationObjects6 } from 'src/app/data/app.data-visualizatio
 export class EffectOfVaccinationOnMorbidityComponent {
   option: echarts.EChartsOption | any = getVaccGraph(25, false);
   timePeriodsInDays: number = 25;
-  titles = titles4;
   isDarkModeActive?: boolean;
-  options = options3;
   selectedOption: string='';
   @Input()arrayOfVisualizationObjects=arrayOfVisualizationObjects6;
 

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { getFurthersGraph } from 'src/app/data/app.graphData';
 import { CoronaService } from 'src/app/services/corona.service';
-import { linksData, options2 } from 'src/app/data/app.arrays';
+import { FurtherLinks } from 'src/app/data/app.arrays';
 import { GraphsService } from 'src/app/services/graphs.service';
 import { arrayOfVisualizationObjects8 } from 'src/app/data/app.data-visualization';
 
@@ -18,8 +18,7 @@ export class FurtherInvestigationsComponent {
   timePeriodsInDays: number = 25;
   isDarkModeActive?: boolean;
   selectedOption: string='';
-  linksData = linksData;
-  options = options2;
+  linksData = FurtherLinks;
   @Input()arrayOfVisualizationObjects=arrayOfVisualizationObjects8;
 
   constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}

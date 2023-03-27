@@ -453,7 +453,7 @@ export const linksData2 = [
   },
 ];
 
-export const linksData = [
+export const FurtherLinks = [
   {
     pictureClass: 'littlePurpleIsrael',
     link: 'maps.arcgis.com',

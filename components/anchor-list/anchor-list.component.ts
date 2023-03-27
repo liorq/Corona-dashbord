@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoronaService } from 'src/app/services/corona.service';
-import { idAnchors, pages } from 'src/app/data/app.arrays';
+import {  pages } from 'src/app/data/app.arrays';
 import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
