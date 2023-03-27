@@ -662,7 +662,7 @@ export const arrayOfVisualizationObjects9 = [
 
 
 
-export const arrayOfVisualizationObjects10 = [
+export const vaccPopObj = [
   {
     TopTitle: 'התחסנות האוכלוסיה',
     isTable: undefined,
@@ -739,7 +739,7 @@ export const arrayOfVisualizationObjects10 = [
 ];
 
 
-export const arrayOfVisualizationObjects11 = [
+export const lightsObj = [
   {
 
     TopTitle: 'רמזור בישובים',

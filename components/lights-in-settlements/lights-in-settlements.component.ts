@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { linksListData, tableData1 } from 'src/app/data/app.arrays';
-import { arrayOfVisualizationObjects11 } from 'src/app/data/app.data-visualization';
+import { lightslinks } from 'src/app/data/app.arrays';
+import {  lightsObj } from 'src/app/data/app.data-visualization';
 
 @Component({
   selector: 'app-lights-in-settlements',
@@ -11,9 +11,8 @@ import { arrayOfVisualizationObjects11 } from 'src/app/data/app.data-visualizati
   ],
 })
 export class LightsInSettlementsComponent {
-  tableData1 = tableData1;
-  linksListData = linksListData;
-  selectedOption: string = 'כלל הישובים';
-  @Input()arrayOfVisualizationObjects=arrayOfVisualizationObjects11;
+  linksListData = lightslinks;
+
+  @Input()arrayOfVisualizationObjects=lightsObj;
 
 }

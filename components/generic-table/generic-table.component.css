@@ -760,7 +760,7 @@ background: #daeaee;
 
   width: fit-content;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
 }

@@ -390,7 +390,7 @@ export const sideNavData = [
   },
 ];
 
-export const links4 = [
+export const Vacclinks = [
   {
     pictureClass: 'blueIsrael',
     link: 'experience.arcgis.com',
@@ -473,7 +473,7 @@ export const linksData = [
     description: 'נתוני הלמ״ס לפי אזורים',
   },
 ];
-export const linksListData = [
+export const lightslinks = [
   {
     pictureClass: 'greenIsrael',
     link: 'experience.arcgis.com',
