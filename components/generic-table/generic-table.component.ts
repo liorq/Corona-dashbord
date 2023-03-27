@@ -36,8 +36,8 @@ export class DataVisualGenericComponent implements OnInit {
   @Input() classContainer?:string="";
   @Input() options=options;
   @Input()classTable='table';
-  isGraphCustom = this.graphName === 'main1';
-  isTableCustom = this.graphName === 'lights';
+  isGraphCustom ?:boolean;
+  isTableCustom ?:boolean;
 
   constructor(private coronaSvc: CoronaService,
     private graphSvc: GraphsService) {}
@@ -53,6 +53,12 @@ export class DataVisualGenericComponent implements OnInit {
      this.coronaSvc.timePeriodsInDays.subscribe(()=>{
       this.initializeGraph()
      })
+
+  }
+  ngOnChanges() {
+    this.isGraphCustom = this.graphName === 'main1';
+    this.isTableCustom = this.graphName === 'lights';
+    this.ngClassContainer=getNgClassContainer(this.isDarkModeActive,this.isTable,this.graphName)
 
   }
   toggleDropdown() {
