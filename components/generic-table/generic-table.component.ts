@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
 import {data,options} from 'src/app/data/app.arrays';
-import { getItems, getNgClassContainer } from 'src/app/data/app.functions';
+import { getGraphLegendList, getNgClassContainer } from 'src/app/data/app.functions';
 import { CoronaService } from 'src/app/services/corona.service';
 import { GraphsService } from 'src/app/services/graphs.service';
 @Component({
@@ -17,7 +17,7 @@ export class DataVisualGenericComponent implements OnInit {
   isActiveShareAndDownload:boolean=false;
   ngClassContainer?:{};
   ////change
-  items = getItems(this.isDarkModeActive);
+  items = getGraphLegendList(this.isDarkModeActive);
   @Input() isTable?:boolean;
   @Input()title?:string;
   @Input() chart: echarts.ECharts | null = null;

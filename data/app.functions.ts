@@ -202,8 +202,8 @@ export function getNgClassColor(
 }
 
 
-////var change names
-export function getItems(isDarkModeActive: boolean) {
+////getGraphLegendList
+export function getGraphLegendList(isDarkModeActive: boolean) {
   return [
     {
       graphName: 'main1',
