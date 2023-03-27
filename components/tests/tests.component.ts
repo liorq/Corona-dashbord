@@ -26,12 +26,12 @@ export class TestsComponent implements AfterViewInit,OnInit {
   constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}
   ngOnInit(){
     this.coronaSvc.timePeriodsInDays.subscribe((newTimePeriods) => {
-      this.graphSvc.updateDataBasedOnTimePeriods(this,"2",newTimePeriods,"secondGraph",3)
+      this.graphSvc.updateDataBasedOnTimePeriods(this,"getTestsGraph",newTimePeriods,"secondGraph",3)
 
     });
 
    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
-    this.graphSvc.updateDataBasedOnDarkModeActive(this,newStatus,'2',3)
+    this.graphSvc.updateDataBasedOnDarkModeActive(this,newStatus,'getTestsGraph',3)
     this.initGraph()
     });
   }

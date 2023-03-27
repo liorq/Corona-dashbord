@@ -19,18 +19,17 @@ export class FurtherInvestigationsComponent {
   isDarkModeActive?: boolean;
   selectedOption: string='';
   linksData = FurtherLinks;
-  ////FurtherObj
   @Input()visObjsArray=FurtherObj;
 
   constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}
   ngOnInit(): void {
     this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
-      this.graphSvc.updateDataBasedOnDarkModeActive(this,newStatus,'4',1)
+      this.graphSvc.updateDataBasedOnDarkModeActive(this,newStatus,'getFurthersGraph',1)
 
     });
 
     this.coronaSvc.timePeriodsInDays.subscribe((newTimePeriods) => {
-      this.graphSvc.updateDataBasedOnTimePeriods(this,"4",newTimePeriods,"fourGraph",1)
+      this.graphSvc.updateDataBasedOnTimePeriods(this,"getFurthersGraph",newTimePeriods,"fourGraph",1)
 
     });
   }

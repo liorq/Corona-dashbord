@@ -30,10 +30,10 @@ export const graphNameObj: { [key: string]: string } = {
   Vaccination: 'secondTable',
 };
 export const optionFunctions :{[key:string]:Function }= {
-  "1": getDeathsGraph,
-  "2": getTestsGraph,
-  "3": getVaccGraph,
-  "4": getFurthersGraph,
+  "getDeathsGraph": getDeathsGraph,
+  "getTestsGraph": getTestsGraph,
+  "getVaccGraph": getVaccGraph,
+  "getFurthersGraph": getFurthersGraph,
 };
 export const graphNumber :{[key:string]:string }= {
   "main": "1",

@@ -21,11 +21,11 @@ export class EffectOfVaccinationOnMorbidityComponent {
   ngOnInit(): void {
 
     this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
-      this.graphSvc.updateDataBasedOnDarkModeActive(this,newStatus,'3',2)
+      this.graphSvc.updateDataBasedOnDarkModeActive(this,newStatus,'getVaccGraph',2)
     });
 
     this.coronaSvc.timePeriodsInDays.subscribe((newTimePeriods) => {
-      this.graphSvc.updateDataBasedOnTimePeriods(this,"3",newTimePeriods,"thirdGraph",2)
+      this.graphSvc.updateDataBasedOnTimePeriods(this,"getVaccGraph",newTimePeriods,"thirdGraph",2)
     });
 
   }

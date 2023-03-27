@@ -8,7 +8,6 @@ import { MyComponentGraphsType } from './app.types';
 import { DataVisualGenericComponent } from '../components/generic-table/generic-table.component';
 import { TestsComponent } from '../components/tests/tests.component';
 import { BehaviorSubject } from 'rxjs';
-import { GraphBodyComponent } from '../components/graph-body/graph-body.component';
 import { MyOptionsComponent } from '../components/my-options/my-options.component';
 
 @Injectable({

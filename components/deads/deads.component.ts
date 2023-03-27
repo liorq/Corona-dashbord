@@ -21,11 +21,11 @@ export class DeadsComponent implements OnInit {
 
   ngOnInit(): void {
     this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
-      this.graphSvc.updateDataBasedOnDarkModeActive(this,newStatus,'1',0)
+      this.graphSvc.updateDataBasedOnDarkModeActive(this,newStatus,'getDeathsGraph',0)
     });
 
     this.coronaSvc.timePeriodsInDays.subscribe((newTimePeriods) => {
-      this.graphSvc.updateDataBasedOnTimePeriods(this,"1",newTimePeriods,"firstGraph",0)
+      this.graphSvc.updateDataBasedOnTimePeriods(this,"getDeathsGraph",newTimePeriods,"firstGraph",0)
     });
   }
 

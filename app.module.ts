@@ -40,7 +40,6 @@ import { InfoIconComponent } from './components/info-icon/info-icon.component';
 import { MainComponent } from './components/main/main.component';
 import { OptionComponent } from './components/option/option.component';
 import { ComponentContainer } from './components/container-component/container-component.component';
-import { GraphBodyComponent } from './components/graph-body/graph-body.component';
 import { ShareAndDownloadComponent } from './components/share-and-download/share-and-download.component';
 
 @NgModule({
@@ -87,7 +86,7 @@ import { ShareAndDownloadComponent } from './components/share-and-download/share
      MainComponent,
      OptionComponent,
      ComponentContainer,
-     GraphBodyComponent,
+
      ShareAndDownloadComponent,
   ],
   imports: [
