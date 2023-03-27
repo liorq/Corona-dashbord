@@ -390,7 +390,7 @@ export const sideNavData = [
   },
 ];
 
-export const Vacclinks = [
+export const VaccLinks = [
   {
     pictureClass: 'blueIsrael',
     link: 'experience.arcgis.com',
@@ -411,7 +411,7 @@ export const Vacclinks = [
     description: 'מספר המתחסנים במנה הראשונה והשנייה לפי גילאים',
   },
 ];
-export const links3 = [
+export const testLinks = [
   {
     pictureClass: 'purpleIsrael',
     link: 'health.gov.il',
@@ -432,7 +432,7 @@ export const links3 = [
     description: 'מרכז ',
   },
 ];
-export const linksData2 = [
+export const abroadLinks = [
   {
     pictureClass: 'greenEarth',
     link: 'experience.arcgis.com',

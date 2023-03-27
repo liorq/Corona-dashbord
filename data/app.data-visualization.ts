@@ -218,7 +218,7 @@ export const arrayOfVisualizationObjects3 = [
 
 
 
-export const arrayOfVisualizationObjects4 = [
+export const abroadObj = [
   {
     TopTitle: 'תחלואה מחו"ל',
     isTable: false,
@@ -286,7 +286,7 @@ export const arrayOfVisualizationObjects4 = [
 
 
 
-export const arrayOfVisualizationObjects5 = [
+export const recovObj = [
   {
     TopTitle: 'תחלואה חוזרת - גיל והתחסנות',
     isTable: false,
@@ -360,7 +360,7 @@ export const arrayOfVisualizationObjects5 = [
 
 
 ///חולים קשה
-export const arrayOfVisualizationObjects6 = [
+export const vaccEffObj = [
   {
     TopTitle: 'חולים קשה ומאושפזים',
     isTable: false,
@@ -426,7 +426,7 @@ export const arrayOfVisualizationObjects6 = [
 
 
 ];
-export const arrayOfVisualizationObjects7 = [
+export const deadsObj = [
   {
 
 
@@ -662,7 +662,7 @@ export const arrayOfVisualizationObjects9 = [
 
 
 
-export const vaccPopObj = [
+export const VaccPopObj = [
   {
     TopTitle: 'התחסנות האוכלוסיה',
     isTable: undefined,

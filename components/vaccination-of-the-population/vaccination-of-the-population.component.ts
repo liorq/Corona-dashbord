@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Vacclinks } from 'src/app/data/app.arrays';
-import { vaccPopObj } from 'src/app/data/app.data-visualization';
+import { VaccLinks } from 'src/app/data/app.arrays';
+import { VaccPopObj } from 'src/app/data/app.data-visualization';
 
 @Component({
   selector: 'app-vaccination-of-the-population',
@@ -11,7 +11,7 @@ import { vaccPopObj } from 'src/app/data/app.data-visualization';
   ],
 })
 export class VaccinationOfThePopulationComponent {
-  links = Vacclinks;
-  @Input()arrayOfVisualizationObjects=vaccPopObj;
+  links = VaccLinks;
+  @Input()arrayOfVisualizationObjects=VaccPopObj;
 
 }

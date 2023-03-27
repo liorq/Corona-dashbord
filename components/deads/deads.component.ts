@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
 import { CoronaService } from 'src/app/services/corona.service';
 import { GraphsService } from 'src/app/services/graphs.service';
-import { arrayOfVisualizationObjects7 } from 'src/app/data/app.data-visualization';
+import { deadsObj } from 'src/app/data/app.data-visualization';
 
 @Component({
   selector: 'app-deads',
@@ -15,7 +15,7 @@ export class DeadsComponent implements OnInit {
   isDarkModeActive?: boolean;
   selectedOption: string='';
   isDropDownVisible?: boolean;
-  @Input()arrayOfVisualizationObjects=arrayOfVisualizationObjects7;
+  @Input()arrayOfVisualizationObjects=deadsObj;
 
   constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}
 

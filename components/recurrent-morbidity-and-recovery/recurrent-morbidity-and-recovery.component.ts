@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { arrayOfVisualizationObjects5 } from 'src/app/data/app.data-visualization';
+import { recovObj } from 'src/app/data/app.data-visualization';
 
 @Component({
   selector: 'app-recurrent-morbidity-and-recovery',
@@ -7,6 +7,6 @@ import { arrayOfVisualizationObjects5 } from 'src/app/data/app.data-visualizatio
   styleUrls: ['./recurrent-morbidity-and-recovery.component.css','../deads/deads.component.css']
 })
 export class RecurrentMorbidityAndRecoveryComponent {
-  @Input()arrayOfVisualizationObjects=arrayOfVisualizationObjects5;
+  @Input()arrayOfVisualizationObjects=recovObj;
 
 }

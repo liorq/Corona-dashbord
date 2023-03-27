@@ -13,13 +13,11 @@ import { GraphsService } from 'src/app/services/graphs.service';
 export class DataVisualGenericComponent implements OnInit {
   isEmptyCard?:boolean;
   isDarkModeActive=false;
-  showResults: boolean = true;
   dropdownVisible: boolean = false;
   isActiveShareAndDownload:boolean=false;
-  data=data
   ngClassContainer?:{};
+  ////change
   items = getItems(this.isDarkModeActive);
-  filteredData: any[]=this.data;
 
   @Input() isTable?:boolean;
   @Input()title?:string;
@@ -37,8 +35,7 @@ export class DataVisualGenericComponent implements OnInit {
   @Input()selectedOption?: string;
   @Input()tableHeaderId?:string="";
   @Input() classContainer?:string="";
-  @Input()options=options;
-  @Input() graph: any;
+  @Input() options=options;
   @Input()classTable='table';
 ///DataVisualizationComponent
   constructor(private coronaSvc: CoronaService,

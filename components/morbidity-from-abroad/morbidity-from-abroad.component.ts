@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { linksData2 } from 'src/app/data/app.arrays';
-import { arrayOfVisualizationObjects4 } from 'src/app/data/app.data-visualization';
+import { abroadLinks } from 'src/app/data/app.arrays';
+import { abroadObj } from 'src/app/data/app.data-visualization';
 
 @Component({
   selector: 'app-morbidity-from-abroad',
@@ -11,8 +11,7 @@ import { arrayOfVisualizationObjects4 } from 'src/app/data/app.data-visualizatio
   ],
 })
 export class MorbidityFromAbroadComponent {
-   links = linksData2;
-  @Input()arrayOfVisualizationObjects=arrayOfVisualizationObjects4;
+   links = abroadLinks;
+  @Input()arrayOfVisualizationObjects=abroadObj;
 
-  // arrayOfVisualizationObjects4
 }

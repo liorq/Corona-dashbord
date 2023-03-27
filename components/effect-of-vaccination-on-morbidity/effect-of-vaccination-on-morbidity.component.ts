@@ -1,9 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { getVaccGraph } from 'src/app/data/app.graphData';
 import { CoronaService } from 'src/app/services/corona.service';
-import { options3, periodOfTimeMap, titles4 } from 'src/app/data/app.arrays';
 import { GraphsService } from 'src/app/services/graphs.service';
-import { arrayOfVisualizationObjects6 } from 'src/app/data/app.data-visualization';
+import { vaccEffObj } from 'src/app/data/app.data-visualization';
 
 @Component({
   selector: 'app-effect-of-vaccination-on-morbidity',
@@ -15,7 +14,7 @@ export class EffectOfVaccinationOnMorbidityComponent {
   timePeriodsInDays: number = 25;
   isDarkModeActive?: boolean;
   selectedOption: string='';
-  @Input()arrayOfVisualizationObjects=arrayOfVisualizationObjects6;
+  @Input()arrayOfVisualizationObjects=vaccEffObj;
 
 
   constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}

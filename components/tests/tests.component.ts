@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
-import { emphasisStyle,links3} from 'src/app/data/app.arrays';
+import {testLinks} from 'src/app/data/app.arrays';
 import { arrayOfVisualizationObjects9 } from 'src/app/data/app.data-visualization';
 ///dont remove
 import { getTestsGraph } from 'src/app/data/app.graphData';
@@ -16,9 +16,9 @@ export class TestsComponent implements AfterViewInit,OnInit {
   timePeriodsInDays: number = 25;
   isDarkModeActive?: boolean;
    chart: echarts.ECharts | null = null;
-  links = links3;
+  links = testLinks;
+  ////testLinks
   selectedOption?: string;
-  emphasisStyle = emphasisStyle;
   @Input()arrayOfVisualizationObjects=arrayOfVisualizationObjects9;
 
   public option?: {} ;
