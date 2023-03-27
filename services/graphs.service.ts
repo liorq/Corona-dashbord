@@ -28,7 +28,9 @@ export class GraphsService {
 
   updateDataBasedOnTimePeriods(componentObj: MyComponentGraphsType, Option: string,newTimePeriods:any,graphField:string,position:number) {
     const selectedOption = this.selectedOption.getValue();
+    console.log(selectedOption)
     selectedOption[Option] = componentObj.selectedOption = periodOfTimeMap[newTimePeriods[graphField]];
+    
     componentObj.timePeriodsInDays = newTimePeriods?.[graphField];
     componentObj.option = optionFunctions[Option](componentObj.timePeriodsInDays, componentObj.isDarkModeActive);
     componentObj.visObjsArray[position].optionObj= componentObj.option

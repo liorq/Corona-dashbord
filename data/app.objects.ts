@@ -35,11 +35,13 @@ export const optionFunctions :{[key:string]:Function }= {
   "getVaccGraph": getVaccGraph,
   "getFurthersGraph": getFurthersGraph,
 };
+
+//////
 export const graphNumber :{[key:string]:string }= {
-  "main": "1",
-  "main1":"2",
- "main3" :"3"  ,
- "main4" :"4"  ,
+  "main": "getDeathsGraph",
+  "main1":"getTestsGraph",
+ "main3" :"getVaccGraph"  ,
+ "main4" :"getFurthersGraph"  ,
  "lights" :"5"  ,
  "Vaccination" :"6"  ,
 };

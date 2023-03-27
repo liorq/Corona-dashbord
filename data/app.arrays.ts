@@ -289,11 +289,7 @@ export const VaccTable: any = [
     address: 'מזכרת בתיה',
   },
 ];
-export const titles2 = [
-  'מספר מאושפזים – יומי',
-  'ממוצע מאומתים שבועי',
-  'מאומתים חדשים יומי',
-];
+
 export const tableColumns = ['address', 'phone', 'email', 'age', 'name', 'id'];
 
 export const columnLabels = {
@@ -328,20 +324,8 @@ export const pages = [
   'מבט על',
 ];
 
-export const titles4 = ['מאומתים יומי - התחסנות', 'חולים קשה - התחסנות'];
 
-export const titles3 = [
-  'אחוז תפוסת מיטות באישפוזים',
-  'אחוז תפיסת המיטות בבית חולים',
-];
 
-export const titles1 = [
-  'מגמת ילדים מאומתים – ממוצע נע 7 ימים',
-  'מגמת ילדים מבודדים – ממוצע נע 7 ימים',
-  'תחלואת ילדים ביחס לתחלואה הכללית -יישובים',
-  'מגמת ילדים באשפוז - ממוצע שבועי',
-  'מגמת ילדים באשפוז לפי מצב רפואי - ממוצע שבועי',
-];
 
 export const sideNavData2 = [
   {

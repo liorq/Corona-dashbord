@@ -202,7 +202,7 @@ export function getNgClassColor(
 }
 
 
-////var
+////var change names
 export function getItems(isDarkModeActive: boolean) {
   return [
     {
