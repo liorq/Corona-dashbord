@@ -1,4 +1,4 @@
-import { options, options2, options3, tableData1, tableData2 } from "./app.arrays";
+import { options, FurtherOptions, VaccOptions, tableData1, tableData2 } from "./app.arrays";
 import { getDeathsGraph, getFurthersGraph, getTestsGraph, getVaccGraph } from "./app.graphData";
 
 export const majorIndicatorsObj = [
@@ -360,6 +360,7 @@ export const recovObj = [
 
 
 ///חולים קשה
+///VaccOptions
 export const vaccEffObj = [
   {
     TopTitle: 'חולים קשה ומאושפזים',
@@ -420,7 +421,7 @@ export const vaccEffObj = [
     selectedOption: '',
     tableHeaderId: "",
     classContainer: "",
-    options: options3,
+    options: VaccOptions,
   },
 
 
@@ -515,7 +516,7 @@ export const FurtherObj = [
     selectedOption: '',
     tableHeaderId: "",
     classContainer: "",
-    options: options2,
+    options: FurtherOptions,
   },
   {
     isTable: undefined,

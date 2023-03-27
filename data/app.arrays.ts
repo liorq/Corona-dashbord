@@ -70,8 +70,8 @@ export const options4: any[] = [
   { label: '    ', value: 30, isRadioBtnNeeded: false, name: 'lastChoice' },
   { label: '     ', value: 30, isRadioBtnNeeded: false, name: 'lastChoice' },
 ];
-
-export const options2: any[] = [
+////FurtherOptions
+export const FurtherOptions: any[] = [
   [
     {
       label: 'הצג לפי',
@@ -145,7 +145,7 @@ export const options2: any[] = [
   ],
 ];
 
-export const options3: any[] = [
+export const VaccOptions: any[] = [
   [
     { label: 'משתנה', value: 660, isRadioBtnNeeded: false, name: 'firstChoice' },
 

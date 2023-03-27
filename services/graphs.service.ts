@@ -111,14 +111,12 @@ export class GraphsService {
     componentObj.chart = myChart;
   }
   updateSelectedTimePeriodHandler(componentObj:MyOptionsComponent) {
-    ////is SelectConfirm
     if (this.isSelectableConfirm(componentObj)) {
       componentObj.periodOfTime = optionPeriods[componentObj.selectedOptions.firstChoice];
       componentObj.timePeriods[graphPeriods[componentObj.graphName||""]] = componentObj.periodOfTime;
       componentObj.coronaSvc.timePeriodsInDays.next(componentObj.timePeriods);
     }
 
-    // this.updateSubject();
   }
   isSelectableConfirm(componentObj:MyOptionsComponent){
     return componentObj.graphName && componentObj.selectedOptions.firstChoice;
