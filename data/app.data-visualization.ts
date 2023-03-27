@@ -115,7 +115,7 @@ export const indicesObj = [
 
 
 
-export const hospitObj = [
+export const HospitalObj = [
   {
     TopTitle: 'תחלואה ואשפוזי ילדים',
     isTable: false,

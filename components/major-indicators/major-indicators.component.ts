@@ -7,10 +7,6 @@ import { majorIndicatorsObj } from 'src/app/data/app.data-visualization';
   styleUrls: ['./major-indicators.component.css'],
 })
 export class MajorIndicatorsComponent {
-
-  ///visObjsArray
   @Input()visObjsArray=majorIndicatorsObj;
-
-
 
 }

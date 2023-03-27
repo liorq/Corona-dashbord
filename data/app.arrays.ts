@@ -473,7 +473,7 @@ export const FurtherLinks = [
     description: 'נתוני הלמ״ס לפי אזורים',
   },
 ];
-export const lightslinks = [
+export const lightsLinks = [
   {
     pictureClass: 'greenIsrael',
     link: 'experience.arcgis.com',

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { lightslinks } from 'src/app/data/app.arrays';
+import { lightsLinks } from 'src/app/data/app.arrays';
 import {  lightsObj } from 'src/app/data/app.data-visualization';
 
 @Component({
@@ -11,7 +11,7 @@ import {  lightsObj } from 'src/app/data/app.data-visualization';
   ],
 })
 export class LightsInSettlementsComponent {
-  linksListData = lightslinks;
+  links = lightsLinks;
 
   @Input()visObjsArray=lightsObj;
 

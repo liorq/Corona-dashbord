@@ -10,7 +10,6 @@ import {  indicesObj } from 'src/app/data/app.data-visualization';
   ],
 })
 export class IndicesOfGeneralMorbidityComponent {
-  /////indicesObj
   @Input()visObjsArray=indicesObj;
 
 

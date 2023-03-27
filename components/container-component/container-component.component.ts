@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ComponentContainer implements OnInit{
   TopTitle:string='';
 @Input()visObjsArray:any[]=[];
-@Input()linksListData:any[]=[]
+@Input()links:any[]=[]
 ClassTitleContainer:string=''
 ngOnInit(): void {
   this.TopTitle=this.visObjsArray[0]?.TopTitle;

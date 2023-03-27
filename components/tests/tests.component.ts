@@ -17,9 +17,8 @@ export class TestsComponent implements AfterViewInit,OnInit {
   isDarkModeActive?: boolean;
    chart: echarts.ECharts | null = null;
   links = testLinks;
-  ////testLinks
   selectedOption?: string;
-  ///testObj
+
   @Input()visObjsArray=testObj;
 
   public option?: {} ;
