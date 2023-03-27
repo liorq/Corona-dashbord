@@ -32,10 +32,10 @@ ngOnInit(): void {
 ngAfterViewInit() {
   this.coronaSvc.isDarkModeActive.subscribe(isDarkModeActive => this.isDarkModeActive = isDarkModeActive);
   this.coronaSvc.isNavBarOpen.subscribe(isNavBarOpen => this.isNavBarOpen = isNavBarOpen);
-   this.scrollSvc.onWindowScroll(this);
+   this.scrollSvc.handleWindowScroll(this);
 
   const scrollingElement = document.getElementById('scrolling-element-inside');
-  scrollingElement?.addEventListener('scroll', () => this.scrollSvc.onWindowScroll(this));
+  scrollingElement?.addEventListener('scroll', () => this.scrollSvc.handleWindowScroll(this));
 }
 
 

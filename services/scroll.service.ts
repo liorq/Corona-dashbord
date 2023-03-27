@@ -38,8 +38,7 @@ export class ScrollService {
       const { right } = activeComponent!.getBoundingClientRect();
       container?.scrollTo({ left: right, top: right, behavior: 'smooth' });
     }
-  ////להחליף אולי שם של פונקציה
-    onWindowScroll(componentObj:MainComponent) {
+    handleWindowScroll(componentObj:MainComponent) {
       const scrollingArea = document.getElementById('scrolling-element-inside');
       if (!scrollingArea) return;
 

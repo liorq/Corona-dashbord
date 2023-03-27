@@ -16,7 +16,7 @@ export class TablesService {
     const newArray =  this.getFilteredCites(componentObj);
 
     if (componentObj.searchText.length > 0&&newArray?.length > 0)
-    componentObj.filteredData = newArray;
+        componentObj.filteredData = newArray;
 
     componentObj.showResults = (newArray?.length > 0);
   }
@@ -77,13 +77,9 @@ export class TablesService {
 
     this.resetOtherClicks(componentObj,column);
     componentObj.tablesData.sort((a: any, b: any) => {
-      let comparison = 0;
-      if (a[column] > b[column])
-        comparison = 1;
-       else if (a[column] < b[column])
-        comparison = -1;
-
+      const comparison = a[column] > b[column] ? 1 : a[column] < b[column] ? -1 : 0;
       return componentObj.currentSort.direction === 'asc' ? comparison : -comparison;
+
     });
   }
   resetOtherClicks(componentObj:TableHeaderComponent,column: string) {
