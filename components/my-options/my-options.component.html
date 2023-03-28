@@ -7,7 +7,7 @@
     <div>{{ option?.label }}</div>
     <ul>
       <li *ngFor="let innerOption of option">
-<app-option [innerOption]="innerOption"></app-option>
+<app-option [selectedOptions]="selectedOptions" [innerOption]="innerOption"></app-option>
 
       </li>
     </ul>

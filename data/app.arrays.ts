@@ -1,10 +1,3 @@
-import { Link, TableRow } from "./app.interfaces";
-export interface Option {
-  label?: string|number;
-  value?: number|string;
-  isRadioBtnNeeded?: boolean;
-  name?: string|number;
-}
 export const colors = [
   { name: 'אדום', range: 'ציון 7.5 ומעלה', class: 'red' },
   { name: 'כתום', range: 'ציון בין 6 ל - 7.5', class: 'orange' },
@@ -44,7 +37,7 @@ export const options: any[] = [
 ];
 
 ////פילוח מדדים שונים לפי גיל ומין
-export const options4: Option[] = [
+export const options4: any[] = [
   {
     label: 'הצג לפי',
     value: 365,
@@ -77,7 +70,8 @@ export const options4: Option[] = [
   { label: '    ', value: 30, isRadioBtnNeeded: false, name: 'lastChoice' },
   { label: '     ', value: 30, isRadioBtnNeeded: false, name: 'lastChoice' },
 ];
-export const FurtherOptions: Option[][] = [
+////FurtherOptions
+export const FurtherOptions: any[] = [
   [
     {
       label: 'הצג לפי',
@@ -85,6 +79,7 @@ export const FurtherOptions: Option[][] = [
       isRadioBtnNeeded: false,
       name: 'firstChoice',
     },
+
     {
       label: 'מאומתים',
       value: 720,
@@ -115,12 +110,8 @@ export const FurtherOptions: Option[][] = [
       isRadioBtnNeeded: true,
       name: 'firstChoice',
     },
-    {
-      label: 'זמן',
-      value: 660,
-      isRadioBtnNeeded: false,
-      name: 'lastChoice',
-    }
+    { label: 'זמן', value: 660, isRadioBtnNeeded: false, name: 'lastChoice' },
+    ,
   ],
   [
     {
@@ -129,12 +120,8 @@ export const FurtherOptions: Option[][] = [
       isRadioBtnNeeded: true,
       name: 'lastChoice',
     },
-    {
-      label: 'שנה',
-      value: 365,
-      isRadioBtnNeeded: true,
-      name: 'lastChoice',
-    },
+    { label: 'שנה', value: 365, isRadioBtnNeeded: true, name: 'lastChoice' },
+
     {
       label: 'חצי שנה',
       value: 180,
@@ -153,24 +140,12 @@ export const FurtherOptions: Option[][] = [
       isRadioBtnNeeded: true,
       name: 'lastChoice',
     },
-    {
-      label: '',
-      value: 30,
-      isRadioBtnNeeded: false,
-      name: 'lastChoice',
-    },
-    {
-      label: '',
-      value: 30,
-      isRadioBtnNeeded: false,
-      name: 'lastChoice',
-    }
+    { label: '    ', value: 30, isRadioBtnNeeded: false, name: 'lastChoice' },
+    { label: '     ', value: 30, isRadioBtnNeeded: false, name: 'lastChoice' },
   ],
 ];
-/////////interface
 
-
-export const VaccOptions: Option[][] = [
+export const VaccOptions: any[] = [
   [
     { label: 'משתנה', value: 660, isRadioBtnNeeded: false, name: 'firstChoice' },
 
@@ -251,7 +226,8 @@ export const emphasisStyle = {
 };
 
 
-export const lightsTable: TableRow[] = [
+/////lightsTable
+export const lightsTable: any = [
   { id: 34, name: '10%', age: '24%', email: 7.2, phone: 7.6, address: 'אילת' },
   {
     id: 63,
@@ -278,7 +254,15 @@ export const lightsTable: TableRow[] = [
     address: 'תל אביב',
   },
 ];
-
+////interface
+export interface TableRow {
+  id: number|string;
+  name: string;
+  age: string;
+  email: string;
+  phone: string;
+  address: string;
+}
 export const VaccTable: TableRow[] = [
   {
     id: 8,
@@ -401,7 +385,7 @@ export const sideNavData = [
   },
 ];
 
-export const VaccLinks:Link[] = [
+export const VaccLinks = [
   {
     pictureClass: 'blueIsrael',
     link: 'experience.arcgis.com',
@@ -422,7 +406,7 @@ export const VaccLinks:Link[] = [
     description: 'מספר המתחסנים במנה הראשונה והשנייה לפי גילאים',
   },
 ];
-export const testLinks:Link[] = [
+export const testLinks = [
   {
     pictureClass: 'purpleIsrael',
     link: 'health.gov.il',
@@ -443,7 +427,7 @@ export const testLinks:Link[] = [
     description: 'מרכז ',
   },
 ];
-export const abroadLinks:Link[] = [
+export const abroadLinks = [
   {
     pictureClass: 'greenEarth',
     link: 'experience.arcgis.com',
@@ -464,7 +448,7 @@ export const abroadLinks:Link[] = [
   },
 ];
 
-export const FurtherLinks:Link[] = [
+export const FurtherLinks = [
   {
     pictureClass: 'littlePurpleIsrael',
     link: 'maps.arcgis.com',
@@ -484,7 +468,7 @@ export const FurtherLinks:Link[] = [
     description: 'נתוני הלמ״ס לפי אזורים',
   },
 ];
-export const lightsLinks:Link[] = [
+export const lightsLinks = [
   {
     pictureClass: 'greenIsrael',
     link: 'experience.arcgis.com',

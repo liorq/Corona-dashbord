@@ -4,11 +4,11 @@ import { graphPeriods, optionPeriods, periodOfTimeMap } from '../data/app.arrays
 ///dont remove!
 import { getDeathsGraph,getTestsGraph,getVaccGraph,getFurthersGraph } from '../data/app.graphData';
 import { optionFunctions, selectedOptionObj } from '../data/app.objects';
-import { MyComponentGraphsType } from './app.types';
 import { DataVisualGenericComponent } from '../components/generic-table/generic-table.component';
 import { TestsComponent } from '../components/tests/tests.component';
 import { BehaviorSubject } from 'rxjs';
 import { MyOptionsComponent } from '../components/my-options/my-options.component';
+import { MyComponentGraphsType } from '../data/app.types';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +25,7 @@ export class GraphsService {
     componentObj.timePeriodsInDays = newTimePeriods?.[graphField];
     componentObj.option = optionFunctions[Option](componentObj.timePeriodsInDays, componentObj.isDarkModeActive);
     componentObj.visObjsArray[position].optionObj= componentObj.option
+
     this.selectedOption.next(selectedOption);
 }
 

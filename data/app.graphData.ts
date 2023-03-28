@@ -412,7 +412,7 @@ export function getFurthersGraph(timePeriod?: number, isDarkMode?: boolean) {
         type: 'shadow',
       },
       valueFormatter: function (value: any, index: any) {
-        return Math.abs(parseFloat(value));
+        return Math.abs(parseFloat(value))+"%";
       },
     },
     grid: {

@@ -10,7 +10,6 @@ import { GraphsService } from 'src/app/services/graphs.service';
   templateUrl: './generic-table.component.html',
   styleUrls: ['./generic-table.component.css'],
 })
-///DataVisualGenericComponent
 export class DataVisualGenericComponent implements OnInit,DataVisualObj {
   isEmptyCard?:boolean;
   isDarkModeActive=false;

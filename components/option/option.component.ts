@@ -11,6 +11,7 @@ export class OptionComponent {
 @Input()innerOption?:any;
 @Input()selectedOptions:any[]=[];
 eventStopProp(event: Event) {
+  console.log(this.selectedOptions)
   event?.stopPropagation();
 }
 }
