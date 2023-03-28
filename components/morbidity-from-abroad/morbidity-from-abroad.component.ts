@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { abroadLinks } from 'src/app/data/app.arrays';
 import { abroadObj } from 'src/app/data/app.data-visualization';
+import { DataVisualObj, Link } from 'src/app/data/app.interfaces';
 
 @Component({
   selector: 'app-morbidity-from-abroad',
@@ -11,7 +12,7 @@ import { abroadObj } from 'src/app/data/app.data-visualization';
   ],
 })
 export class MorbidityFromAbroadComponent {
-   links = abroadLinks;
-  @Input()visObjsArray=abroadObj;
+   links:Link[] = abroadLinks;
+  @Input()visObjsArray:DataVisualObj[]=abroadObj;
 
 }

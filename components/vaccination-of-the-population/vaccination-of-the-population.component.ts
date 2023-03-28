@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { VaccLinks } from 'src/app/data/app.arrays';
 import { VaccPopObj } from 'src/app/data/app.data-visualization';
+import { DataVisualObj } from 'src/app/data/app.interfaces';
 
 @Component({
   selector: 'app-vaccination-of-the-population',
@@ -12,6 +13,6 @@ import { VaccPopObj } from 'src/app/data/app.data-visualization';
 })
 export class VaccinationOfThePopulationComponent {
   links = VaccLinks;
-  @Input()visObjsArray=VaccPopObj;
+  @Input()visObjsArray:DataVisualObj[]=VaccPopObj;
 
 }

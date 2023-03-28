@@ -3,6 +3,7 @@ import * as echarts from 'echarts';
 import { CoronaService } from 'src/app/services/corona.service';
 import { GraphsService } from 'src/app/services/graphs.service';
 import { deadsObj } from 'src/app/data/app.data-visualization';
+import { DataVisualObj } from 'src/app/data/app.interfaces';
 
 @Component({
   selector: 'app-deads',
@@ -15,7 +16,7 @@ export class DeadsComponent implements OnInit {
   isDarkModeActive?: boolean;
   selectedOption: string='';
   isDropDownVisible?: boolean;
-  @Input()visObjsArray=deadsObj;
+  @Input()visObjsArray:DataVisualObj[]=deadsObj;
 
   constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}
 

@@ -1,6 +1,7 @@
 import { options, FurtherOptions, VaccOptions, lightsTable, VaccTable } from "./app.arrays";
 import { getDeathsGraph, getFurthersGraph, getTestsGraph, getVaccGraph } from "./app.graphData";
-
+import { DataVisualObj } from "./app.interfaces";
+////
 export const majorIndicatorsObj = [
   {
     ClassTitleContainer:'flex-end',
@@ -427,11 +428,11 @@ export const vaccEffObj = [
 
 
 ];
-export const deadsObj = [
+export const deadsObj:DataVisualObj[] = [
   {
 
 
-    TopTitle: 'נפטרים',
+    // TopTitle: 'נפטרים',
     isTable: false,
     title: 'נפטרים יומי',
     chart: null,

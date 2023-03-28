@@ -4,6 +4,7 @@ import { CoronaService } from 'src/app/services/corona.service';
 import { FurtherLinks } from 'src/app/data/app.arrays';
 import { GraphsService } from 'src/app/services/graphs.service';
 import { FurtherObj } from 'src/app/data/app.data-visualization';
+import { DataVisualObj, Link } from 'src/app/data/app.interfaces';
 
 @Component({
   selector: 'app-further-investigations',
@@ -18,8 +19,8 @@ export class FurtherInvestigationsComponent {
   timePeriodsInDays: number = 25;
   isDarkModeActive?: boolean;
   selectedOption: string='';
-  linksData = FurtherLinks;
-  @Input()visObjsArray=FurtherObj;
+  linksData:Link[] = FurtherLinks;
+  @Input()visObjsArray:DataVisualObj[]=FurtherObj;
 
   constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}
   ngOnInit(): void {

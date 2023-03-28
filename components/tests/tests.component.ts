@@ -4,6 +4,7 @@ import {testLinks} from 'src/app/data/app.arrays';
 import { testObj } from 'src/app/data/app.data-visualization';
 ///dont remove
 import { getTestsGraph } from 'src/app/data/app.graphData';
+import { DataVisualObj, Link } from 'src/app/data/app.interfaces';
 import { CoronaService } from 'src/app/services/corona.service';
 import { GraphsService } from 'src/app/services/graphs.service';
 
@@ -16,9 +17,9 @@ export class TestsComponent implements AfterViewInit,OnInit {
   timePeriodsInDays: number = 25;
   isDarkModeActive?: boolean;
   chart: echarts.ECharts | null = null;
-  links = testLinks;
+  links:Link[] = testLinks;
   selectedOption?: string;
-  @Input()visObjsArray=testObj;
+  @Input()visObjsArray:DataVisualObj[]=testObj;
 
   public option?: {} ;
 

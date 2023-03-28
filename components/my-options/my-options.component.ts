@@ -34,9 +34,6 @@ export class MyOptionsComponent implements OnInit {
     });
   }
 
-  eventStopProp(event: Event) {
-    event?.stopPropagation();
-  }
 
   updateSelectedTimePeriodHandler() {
     if (this.isSelectableConfirm())

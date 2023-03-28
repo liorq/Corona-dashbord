@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { majorIndicatorsObj } from 'src/app/data/app.data-visualization';
+import { DataVisualObj } from 'src/app/data/app.interfaces';
 
 @Component({
   selector: 'app-major-indicators',
@@ -7,6 +8,6 @@ import { majorIndicatorsObj } from 'src/app/data/app.data-visualization';
   styleUrls: ['./major-indicators.component.css'],
 })
 export class MajorIndicatorsComponent {
-  @Input()visObjsArray=majorIndicatorsObj;
+  @Input()visObjsArray:DataVisualObj[]=majorIndicatorsObj;
 
 }

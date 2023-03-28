@@ -44,7 +44,6 @@ export class DataVisualGenericComponent implements OnInit {
     private graphSvc: GraphsService) {}
 
   ngOnInit(){
-    // this.ngClassContainer=getNgClassForDataVis(this.isDarkModeActive,this.isTable,this.graphName)
 
     this.coronaSvc.isDarkModeActive.subscribe((newStatus:boolean)=>{
       this.isDarkModeActive=newStatus;
@@ -57,11 +56,9 @@ export class DataVisualGenericComponent implements OnInit {
 
   }
   ngOnChanges() {
-    ////getNgClassForDataVis
     this.isGraphCustom = this.graphName === 'main1';
     this.isTableCustom = this.graphName === 'lights';
     this.ngClassContainer=getNgClassForDataVis(this.isDarkModeActive,this.isTable,this.graphName)
-
   }
   toggleDropdown() {
     this.dropdownVisible = !this.dropdownVisible;

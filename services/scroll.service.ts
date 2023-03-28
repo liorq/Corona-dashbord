@@ -19,7 +19,7 @@ export class ScrollService {
         }
       }
   }
-  isScrollToTitleOfComponentSucceeded(anchorListObj:any){
+  isScrollToTitleOfComponentSucceeded(anchorListObj:AnchorListComponent){
     const activeComponent = document.getElementById(anchorListObj.componentNameActive);
 
    return activeComponent && anchorListObj.lastComponentActiveId !== anchorListObj.componentNameActive

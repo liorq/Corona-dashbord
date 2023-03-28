@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { recovObj } from 'src/app/data/app.data-visualization';
+import { DataVisualObj } from 'src/app/data/app.interfaces';
 
 @Component({
   selector: 'app-recurrent-morbidity-and-recovery',
@@ -7,6 +8,6 @@ import { recovObj } from 'src/app/data/app.data-visualization';
   styleUrls: ['./recurrent-morbidity-and-recovery.component.css','../deads/deads.component.css']
 })
 export class RecurrentMorbidityAndRecoveryComponent {
-  @Input()visObjsArray=recovObj;
+  @Input()visObjsArray:DataVisualObj[]=recovObj;
 
 }

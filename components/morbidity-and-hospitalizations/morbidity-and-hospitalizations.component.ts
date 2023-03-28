@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { HospitalObj } from 'src/app/data/app.data-visualization';
+import { DataVisualObj } from 'src/app/data/app.interfaces';
 
 @Component({
   selector: 'app-morbidity-and-hospitalizations',
@@ -10,6 +11,6 @@ import { HospitalObj } from 'src/app/data/app.data-visualization';
   ],
 })
 export class MorbidityAndHospitalizationsComponent {
-  @Input()visObjsArray=HospitalObj;
+  @Input()visObjsArray:DataVisualObj[]=HospitalObj;
 
 }

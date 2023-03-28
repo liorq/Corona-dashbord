@@ -3,6 +3,7 @@ import { getVaccGraph } from 'src/app/data/app.graphData';
 import { CoronaService } from 'src/app/services/corona.service';
 import { GraphsService } from 'src/app/services/graphs.service';
 import { vaccEffObj } from 'src/app/data/app.data-visualization';
+import { DataVisualObj } from 'src/app/data/app.interfaces';
 
 @Component({
   selector: 'app-effect-of-vaccination-on-morbidity',
@@ -14,7 +15,7 @@ export class EffectOfVaccinationOnMorbidityComponent {
   timePeriodsInDays: number = 25;
   isDarkModeActive?: boolean;
   selectedOption: string='';
-  @Input()visObjsArray=vaccEffObj;
+  @Input()visObjsArray:DataVisualObj[]=vaccEffObj;
 
 
   constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}
