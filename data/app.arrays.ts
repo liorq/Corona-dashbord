@@ -1,3 +1,10 @@
+import { Link, TableRow } from "./app.interfaces";
+export interface Option {
+  label?: string|number;
+  value?: number|string;
+  isRadioBtnNeeded?: boolean;
+  name?: string|number;
+}
 export const colors = [
   { name: 'אדום', range: 'ציון 7.5 ומעלה', class: 'red' },
   { name: 'כתום', range: 'ציון בין 6 ל - 7.5', class: 'orange' },
@@ -37,7 +44,7 @@ export const options: any[] = [
 ];
 
 ////פילוח מדדים שונים לפי גיל ומין
-export const options4: any[] = [
+export const options4: Option[] = [
   {
     label: 'הצג לפי',
     value: 365,
@@ -70,8 +77,7 @@ export const options4: any[] = [
   { label: '    ', value: 30, isRadioBtnNeeded: false, name: 'lastChoice' },
   { label: '     ', value: 30, isRadioBtnNeeded: false, name: 'lastChoice' },
 ];
-////FurtherOptions
-export const FurtherOptions: any[] = [
+export const FurtherOptions: Option[][] = [
   [
     {
       label: 'הצג לפי',
@@ -79,7 +85,6 @@ export const FurtherOptions: any[] = [
       isRadioBtnNeeded: false,
       name: 'firstChoice',
     },
-
     {
       label: 'מאומתים',
       value: 720,
@@ -110,8 +115,12 @@ export const FurtherOptions: any[] = [
       isRadioBtnNeeded: true,
       name: 'firstChoice',
     },
-    { label: 'זמן', value: 660, isRadioBtnNeeded: false, name: 'lastChoice' },
-    ,
+    {
+      label: 'זמן',
+      value: 660,
+      isRadioBtnNeeded: false,
+      name: 'lastChoice',
+    }
   ],
   [
     {
@@ -120,8 +129,12 @@ export const FurtherOptions: any[] = [
       isRadioBtnNeeded: true,
       name: 'lastChoice',
     },
-    { label: 'שנה', value: 365, isRadioBtnNeeded: true, name: 'lastChoice' },
-
+    {
+      label: 'שנה',
+      value: 365,
+      isRadioBtnNeeded: true,
+      name: 'lastChoice',
+    },
     {
       label: 'חצי שנה',
       value: 180,
@@ -140,12 +153,24 @@ export const FurtherOptions: any[] = [
       isRadioBtnNeeded: true,
       name: 'lastChoice',
     },
-    { label: '    ', value: 30, isRadioBtnNeeded: false, name: 'lastChoice' },
-    { label: '     ', value: 30, isRadioBtnNeeded: false, name: 'lastChoice' },
+    {
+      label: '',
+      value: 30,
+      isRadioBtnNeeded: false,
+      name: 'lastChoice',
+    },
+    {
+      label: '',
+      value: 30,
+      isRadioBtnNeeded: false,
+      name: 'lastChoice',
+    }
   ],
 ];
+/////////interface
 
-export const VaccOptions: any[] = [
+
+export const VaccOptions: Option[][] = [
   [
     { label: 'משתנה', value: 660, isRadioBtnNeeded: false, name: 'firstChoice' },
 
@@ -226,8 +251,7 @@ export const emphasisStyle = {
 };
 
 
-/////lightsTable
-export const lightsTable: any = [
+export const lightsTable: TableRow[] = [
   { id: 34, name: '10%', age: '24%', email: 7.2, phone: 7.6, address: 'אילת' },
   {
     id: 63,
@@ -254,15 +278,7 @@ export const lightsTable: any = [
     address: 'תל אביב',
   },
 ];
-////interface
-export interface TableRow {
-  id: number|string;
-  name: string;
-  age: string;
-  email: string;
-  phone: string;
-  address: string;
-}
+
 export const VaccTable: TableRow[] = [
   {
     id: 8,
@@ -385,7 +401,7 @@ export const sideNavData = [
   },
 ];
 
-export const VaccLinks = [
+export const VaccLinks:Link[] = [
   {
     pictureClass: 'blueIsrael',
     link: 'experience.arcgis.com',
@@ -406,7 +422,7 @@ export const VaccLinks = [
     description: 'מספר המתחסנים במנה הראשונה והשנייה לפי גילאים',
   },
 ];
-export const testLinks = [
+export const testLinks:Link[] = [
   {
     pictureClass: 'purpleIsrael',
     link: 'health.gov.il',
@@ -427,7 +443,7 @@ export const testLinks = [
     description: 'מרכז ',
   },
 ];
-export const abroadLinks = [
+export const abroadLinks:Link[] = [
   {
     pictureClass: 'greenEarth',
     link: 'experience.arcgis.com',
@@ -448,7 +464,7 @@ export const abroadLinks = [
   },
 ];
 
-export const FurtherLinks = [
+export const FurtherLinks:Link[] = [
   {
     pictureClass: 'littlePurpleIsrael',
     link: 'maps.arcgis.com',
@@ -468,7 +484,7 @@ export const FurtherLinks = [
     description: 'נתוני הלמ״ס לפי אזורים',
   },
 ];
-export const lightsLinks = [
+export const lightsLinks:Link[] = [
   {
     pictureClass: 'greenIsrael',
     link: 'experience.arcgis.com',
