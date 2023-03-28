@@ -64,7 +64,7 @@ export class GraphsService {
   }
 
   toggleDarkModeForItems(componentObj:DataVisualGenericComponent){
-    componentObj.items.forEach(item => {
+    componentObj.legendList.forEach(item => {
       item.isDarkMode = !item.isDarkMode;
     });
   }

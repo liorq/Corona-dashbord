@@ -17,7 +17,8 @@ export class DataVisualGenericComponent implements OnInit {
   isActiveShareAndDownload:boolean=false;
   ngClassContainer?:{};
   ////change
-  items = getGraphLegendList(this.isDarkModeActive);
+  ////legendList
+  legendList = getGraphLegendList(this.isDarkModeActive);
   @Input() isTable?:boolean;
   @Input()title?:string;
   @Input() chart: echarts.ECharts | null = null;

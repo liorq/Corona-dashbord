@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['../generic-table/generic-table.component.css','./variable-graph-label.component.css']
 })
 export class VariableGraphLabelComponent {
-  @Input()items?:any[];
+  @Input()legendList?:any[];
   @Input()graphName?:string;
 }
