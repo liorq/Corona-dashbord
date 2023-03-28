@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 
 @Component({
   selector: 'app-info-icon',
@@ -11,10 +11,10 @@ import { CoronaService } from 'src/app/services/corona.service';
 })
 export class InfoIconComponent implements OnInit{
  isDarkModeActive?: boolean;
- constructor(private coronaSvc:CoronaService){}
+ constructor(private generalSvc:GeneralService){}
 
  ngOnInit(){
-this.coronaSvc.isDarkModeActive.subscribe((newStatus)=>{
+this.generalSvc.isDarkModeActive.subscribe((newStatus)=>{
   this.isDarkModeActive=newStatus;
 })
 }

@@ -57,7 +57,7 @@ export class ScrollService {
       });
 
       componentObj.currentPosition = scrollingArea.scrollTop;
-      componentObj.coronaSvc.ranges.next([...newArray]);
+      componentObj.generalSvc.ranges.next([...newArray]);
 
       for (const range of newArray) {
         if (range == null) continue;
@@ -65,7 +65,7 @@ export class ScrollService {
           componentObj.currentPosition + halfWindowHeight >= range[0] &&
           componentObj.currentPosition + halfWindowHeight < range[1]
         ) {
-          componentObj.coronaSvc.componentNameActive.next(range[2]);
+          componentObj.generalSvc.componentNameActive.next(range[2]);
           break;
         }
       }

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { clickCounterObj } from 'src/app/data/app.arrays';
 import { getNgClassTableHdrCmp } from 'src/app/data/app.functions';
 
@@ -20,10 +20,10 @@ export class TableHeaderTitleComponent implements OnInit {
   @Input() tableTitleId?: string;
   isDarkModeActive?: boolean;
   clickCounterObj = clickCounterObj;
-  constructor(public coronaSvc: CoronaService) {}
+  constructor(public generalSvc: GeneralService) {}
 
   ngOnInit(): void {
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;
     });
   }

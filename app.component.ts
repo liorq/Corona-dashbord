@@ -1,5 +1,5 @@
 import {  Component, OnInit } from '@angular/core';
-import { CoronaService } from './services/corona.service';
+import { GeneralService } from './services/general-info.service';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +8,9 @@ import { CoronaService } from './services/corona.service';
 })
 export class AppComponent implements OnInit {
   isNavBarOpen?:boolean;
-  constructor(private coronaSvc:CoronaService){}
+  constructor(private generalSvc:GeneralService){}
 ngOnInit(): void {
-  this.coronaSvc.isNavBarOpen.subscribe((newStatus)=>{
+  this.generalSvc.isNavBarOpen.subscribe((newStatus)=>{
     this.isNavBarOpen=newStatus
   })
 }

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { getClarificationDarkModeNgClass } from 'src/app/data/app.functions';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 
 @Component({
   selector: 'app-clarification',
@@ -16,9 +16,9 @@ export class ClarificationComponent implements OnInit {
   @Input() isTable?: boolean;
   isDarkModeActive?: boolean;
 
-  constructor(private coronaSvc: CoronaService) {}
+  constructor(private generalSvc: GeneralService) {}
   ngOnInit(): void {
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;
       this.ngClassObJ = getClarificationDarkModeNgClass(this.isDarkModeActive);
     });

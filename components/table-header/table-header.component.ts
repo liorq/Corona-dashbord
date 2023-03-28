@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { clickCounterObj } from 'src/app/data/app.arrays';
 import { getCurrentSortObj, getTableData } from 'src/app/data/app.functions';
 import { DataVisualGenericComponent } from '../generic-table/generic-table.component';
@@ -24,11 +24,11 @@ export class TableHeaderComponent implements OnInit {
   currentSort = getCurrentSortObj();
   headers: any[] = [];
 
-  constructor(private coronaSvc: CoronaService,private tablesSvc: TablesService) {}
+  constructor(private generalSvc: GeneralService,private tablesSvc: TablesService) {}
   ngOnInit(): void {
    this.initializeVisualComponentProperties()
 
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;
       this.headers = getTableData(this.isDarkModeActive,this.graphName);
     });

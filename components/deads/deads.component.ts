@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { GraphsService } from 'src/app/services/graphs.service';
 import { deadsObj } from 'src/app/data/app.data-visualization';
 import { DataVisualObj } from 'src/app/data/app.interfaces';
@@ -18,14 +18,14 @@ export class DeadsComponent implements OnInit {
   isDropDownVisible?: boolean;
   @Input()visObjsArray:DataVisualObj[]=deadsObj;
 
-  constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}
+  constructor(private generalSvc: GeneralService,private graphSvc:GraphsService) {}
 
   ngOnInit(): void {
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
       this.graphSvc.updateDataBasedOnDarkModeActive(this,newStatus,'getDeathsGraph',0)
     });
 
-    this.coronaSvc.timePeriodsInDays.subscribe((newTimePeriods) => {
+    this.generalSvc.timePeriodsInDays.subscribe((newTimePeriods) => {
       this.graphSvc.updateDataBasedOnTimePeriods(this,"getDeathsGraph",newTimePeriods,"firstGraph",0)
     });
   }

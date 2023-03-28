@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { clickCounterObj } from 'src/app/data/app.arrays';
 import { graphNameObj } from 'src/app/data/app.objects';
 import { getTableBodyClassNg } from 'src/app/data/app.functions';
@@ -19,11 +19,11 @@ export class TableBodyComponent implements OnInit {
   isTable?: boolean;
   clickCounterObj = clickCounterObj;
   isSmallColumns?: {};
-  constructor(private coronaSvc: CoronaService) {}
+  constructor(private generalSvc: GeneralService) {}
   ngOnInit(): void {
    this.initializeVisualComponentProperties()
 
-    this.coronaSvc.filteredData.subscribe((newData) => {
+    this.generalSvc.filteredData.subscribe((newData) => {
       if (this.graphName && newData != undefined) {
         this.tablesData = newData[graphNameObj[this.graphName]];
       }

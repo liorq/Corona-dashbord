@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 
 @Component({
   selector: 'app-header',
@@ -11,17 +11,17 @@ export class HeaderComponent implements OnInit {
   isNavBarOpen?: boolean;
   isSwitchToEnglishBtnOpen?: boolean = false;
 
-  constructor(public coronaSvc: CoronaService) {}
+  constructor(public generalSvc: GeneralService) {}
   ngOnInit(): void {
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;
     });
-    this.coronaSvc.isNavBarOpen.subscribe((newStatus) => {
+    this.generalSvc.isNavBarOpen.subscribe((newStatus) => {
       this.isNavBarOpen = newStatus;
     });
   }
 
   toggleMode() {
-    this.coronaSvc.isDarkModeActive.next(!this.isDarkModeActive);
+    this.generalSvc.isDarkModeActive.next(!this.isDarkModeActive);
   }
 }

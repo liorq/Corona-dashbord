@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import {  pages } from 'src/app/data/app.arrays';
 import { ScrollService } from 'src/app/services/scroll.service';
 
@@ -14,22 +14,22 @@ export class AnchorListComponent implements OnInit {
   lastComponentActiveId: string = '';
   ranges?: any[];
   constructor(
-    private coronaSvc: CoronaService,
+    private generalSvc: GeneralService,
     private scrollSvc: ScrollService
   ) {}
 
   ngOnInit(): void {
-    this.coronaSvc.componentNameActive.subscribe((newName) => {
+    this.generalSvc.componentNameActive.subscribe((newName) => {
       this.componentNameActive = newName;
     });
-    this.coronaSvc.ranges.subscribe((newData) => {
+    this.generalSvc.ranges.subscribe((newData) => {
       this.ranges = newData;
       this.scrollToTitleOfComponentHandler();
     });
   }
 
   scrollToClickedComponent(anchor: string) {
-    this.coronaSvc.componentNameActive.next(anchor);
+    this.generalSvc.componentNameActive.next(anchor);
     this.scrollSvc.scrollToClickedComponent(this);
   }
 

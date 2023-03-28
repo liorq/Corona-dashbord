@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { getFurthersGraph } from 'src/app/data/app.graphData';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { FurtherLinks } from 'src/app/data/app.arrays';
 import { GraphsService } from 'src/app/services/graphs.service';
 import { FurtherObj } from 'src/app/data/app.data-visualization';
@@ -22,14 +22,14 @@ export class FurtherInvestigationsComponent {
   linksData:Link[] = FurtherLinks;
   @Input()visObjsArray:DataVisualObj[]=FurtherObj;
 
-  constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}
+  constructor(private generalSvc: GeneralService,private graphSvc:GraphsService) {}
   ngOnInit(): void {
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
       this.graphSvc.updateDataBasedOnDarkModeActive(this,newStatus,'getFurthersGraph',1)
 
     });
 
-    this.coronaSvc.timePeriodsInDays.subscribe((newTimePeriods) => {
+    this.generalSvc.timePeriodsInDays.subscribe((newTimePeriods) => {
       this.graphSvc.updateDataBasedOnTimePeriods(this,"getFurthersGraph",newTimePeriods,"fourGraph",1)
 
     });

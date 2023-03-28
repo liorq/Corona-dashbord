@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { graphDropdownMap, tableTypes } from 'src/app/data/app.objects';
 import { getSearchOptionsInputClass, getNgClassForBtns } from 'src/app/data/app.functions';
 import { DataVisualGenericComponent } from '../generic-table/generic-table.component';
@@ -22,22 +22,22 @@ export class MySearchOptionsComponent implements OnInit {
   @Input() showResults?: boolean=false;
   isDarkModeActive: boolean = false;
   InputClass?: {};
-  constructor(public coronaSvc: CoronaService,public TableSvc: TablesService) {}
+  constructor(public generalSvc: GeneralService,public TableSvc: TablesService) {}
 
   ngOnInit(): void {
     const {graphName}=this.obj??{}
     this.graphName=graphName;
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;
     });
 
-    this.coronaSvc.isDropDownVisible.subscribe((newStatus) => {
+    this.generalSvc.isDropDownVisible.subscribe((newStatus) => {
       if (this.graphName)
         this.dropdownVisible = newStatus[graphDropdownMap[this.graphName]];
 
     });
 
-    this.coronaSvc.filteredData.subscribe((newData) => {
+    this.generalSvc.filteredData.subscribe((newData) => {
       this.filteredData =newData[tableTypes[this.graphName||""] ];
     });
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoronaService } from '../../services/corona.service';
+import { GeneralService } from '../../services/general-info.service';
 import { sideNavData } from 'src/app/data/app.arrays';
 @Component({
   selector: 'app-side-nav',
@@ -10,16 +10,16 @@ export class SideNavComponent implements OnInit {
   showDropdown: boolean[] = [false, false, false];
   isNavBarOpen?: boolean;
   sideNavData = sideNavData;
-  constructor(private coronaSvc: CoronaService) {}
+  constructor(private generalSvc: GeneralService) {}
 
   ngOnInit(): void {
-    this.coronaSvc.isNavBarOpen.subscribe((newStatus) => {
+    this.generalSvc.isNavBarOpen.subscribe((newStatus) => {
       this.isNavBarOpen = newStatus;
     });
   }
 
   toggleNav() {
-    this.coronaSvc.isNavBarOpen.next(!this.isNavBarOpen);
+    this.generalSvc.isNavBarOpen.next(!this.isNavBarOpen);
     document.getElementById('sidenav')?.classList.toggle('show');
   }
 

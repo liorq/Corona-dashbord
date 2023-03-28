@@ -16,9 +16,9 @@
     <div class="logo"></div>
 
     <div
-      (click)="this.coronaSvc.isNavBarOpen.next(!this.isNavBarOpen)"
+      (click)="this.generalSvc.isNavBarOpen.next(!this.isNavBarOpen)"
       [class]="
-        !this.coronaSvc.isNavBarOpen.getValue()
+        !this.generalSvc.isNavBarOpen.getValue()
           ? 'hamburger-btn'
           : 'hamburger-btn-close'
       "

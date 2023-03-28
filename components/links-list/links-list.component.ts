@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 
 @Component({
   selector: 'app-links-list',
@@ -12,9 +12,9 @@ export class LinksListComponent implements OnInit {
   @Input() description?: string;
   @Input() pictureClass?: string;
   isDarkModeActive?: boolean;
-  constructor(private coronaSvc: CoronaService) {}
+  constructor(private generalSvc: GeneralService) {}
   ngOnInit() {
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus: boolean) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus: boolean) => {
       this.isDarkModeActive = newStatus;
     });
   }

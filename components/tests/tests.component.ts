@@ -5,7 +5,7 @@ import { testObj } from 'src/app/data/app.data-visualization';
 ///dont remove
 import { getTestsGraph } from 'src/app/data/app.graphData';
 import { DataVisualObj, Link } from 'src/app/data/app.interfaces';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { GraphsService } from 'src/app/services/graphs.service';
 
 @Component({
@@ -23,14 +23,14 @@ export class TestsComponent implements AfterViewInit,OnInit {
 
   public option?: {} ;
 
-  constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}
+  constructor(private generalSvc: GeneralService,private graphSvc:GraphsService) {}
   ngOnInit(){
-    this.coronaSvc.timePeriodsInDays.subscribe((newTimePeriods) => {
+    this.generalSvc.timePeriodsInDays.subscribe((newTimePeriods) => {
       this.graphSvc.updateDataBasedOnTimePeriods(this,"getTestsGraph",newTimePeriods,"secondGraph",3)
 
     });
 
-   this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+   this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
     this.graphSvc.updateDataBasedOnDarkModeActive(this,newStatus,'getTestsGraph',3)
     this.initGraph()
     });

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { getSelectBoxBtnsClass, getSelectBoxRecClass } from 'src/app/data/app.functions';
 import { graphDropdownMap, graphNumber } from 'src/app/data/app.objects';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { DataVisualGenericComponent } from '../generic-table/generic-table.component';
 import { GraphsService } from 'src/app/services/graphs.service';
 
@@ -22,7 +22,7 @@ export class SelectBoxComponent implements OnInit {
   @Input() selectBoxId?: string;
   @Input()obj?:DataVisualGenericComponent;
 
-  constructor(    private coronaSvc: CoronaService,
+  constructor(    private generalSvc: GeneralService,
     private graphSvc: GraphsService,) {}
   ngOnInit(): void {
 
@@ -31,7 +31,7 @@ export class SelectBoxComponent implements OnInit {
   this.selectedOption= newStatus[graphNumber[this.graphName||""]]
 
  })
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;
 
       this.btnNgClass = getSelectBoxBtnsClass(this.isDarkModeActive);
@@ -41,7 +41,7 @@ export class SelectBoxComponent implements OnInit {
       );
     });
 
-    this.coronaSvc.isDropDownVisible.subscribe((newStatus) => {
+    this.generalSvc.isDropDownVisible.subscribe((newStatus) => {
       if (this.graphName)
         this.dropdownVisible = newStatus[graphDropdownMap[this.graphName]];
     });

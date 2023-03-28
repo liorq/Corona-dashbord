@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { DataVisualGenericComponent } from '../generic-table/generic-table.component';
 
 @Component({
@@ -17,11 +17,11 @@ export class TableHeaderIconsComponent {
  graphName: string = '';
  dropdownVisible?: boolean=false;
   isDarkModeActive?: boolean;
-  constructor(private coronaSvc: CoronaService) {}
+  constructor(private generalSvc: GeneralService) {}
   ngOnInit(): void {
    this.initializeVisualComponentProperties()
 
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;
     });
   }

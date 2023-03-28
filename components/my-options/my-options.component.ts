@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { graphPeriods, optionPeriods } from 'src/app/data/app.arrays';
 import { getNgClassForBtns } from 'src/app/data/app.functions';
 import { graphDropdownMap } from 'src/app/data/app.objects';
@@ -19,16 +19,16 @@ export class MyOptionsComponent implements OnInit {
   @Input() ngClassForBtns?: {};
   @Input() dropdownVisible?: boolean;
   @Input() graphName?: string;
-  timePeriods = this.coronaSvc.timePeriodsInDays.getValue();
+  timePeriods = this.generalSvc.timePeriodsInDays.getValue();
   selectedOption?: string;
   periodOfTime?: number;
   isDarkModeActive?: boolean;
   isDropDownVisible?: {};
   selectedOptions: any = [];
 
-  constructor(public coronaSvc: CoronaService,public graphSvc: GraphsService) {}
+  constructor(public generalSvc: GeneralService,public graphSvc: GraphsService) {}
   ngOnInit(): void {
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;
       this.ngClassForBtns = getNgClassForBtns(this.isDarkModeActive);
     });
@@ -48,10 +48,10 @@ export class MyOptionsComponent implements OnInit {
 
   updateGraphRelatedSubjects() {
     if (this.graphName) {
-      this.coronaSvc.timePeriodsInDays.next(this.timePeriods);
-      const subjectValues = this.coronaSvc.isDropDownVisible.getValue();
+      this.generalSvc.timePeriodsInDays.next(this.timePeriods);
+      const subjectValues = this.generalSvc.isDropDownVisible.getValue();
       subjectValues[graphDropdownMap[this.graphName]] = false;
-      this.coronaSvc.isDropDownVisible.next(subjectValues);
+      this.generalSvc.isDropDownVisible.next(subjectValues);
     }
   }
 }

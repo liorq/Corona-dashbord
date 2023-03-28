@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { componentsId } from 'src/app/data/app.arrays';
 import { ScrollService } from 'src/app/services/scroll.service';
 
@@ -16,13 +16,13 @@ export class MainComponent implements OnInit{
 
 
 
-constructor(public coronaSvc: CoronaService,private scrollSvc:ScrollService) {}
+constructor(public generalSvc: GeneralService,private scrollSvc:ScrollService) {}
 ngOnInit(): void {
-  this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+  this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
     this.isDarkModeActive = newStatus;
   });
 
-  this.coronaSvc.isNavBarOpen.subscribe((newStatus) => {
+  this.generalSvc.isNavBarOpen.subscribe((newStatus) => {
     this.isNavBarOpen = newStatus;
   });
 
@@ -30,8 +30,8 @@ ngOnInit(): void {
 
 
 ngAfterViewInit() {
-  this.coronaSvc.isDarkModeActive.subscribe(isDarkModeActive => this.isDarkModeActive = isDarkModeActive);
-  this.coronaSvc.isNavBarOpen.subscribe(isNavBarOpen => this.isNavBarOpen = isNavBarOpen);
+  this.generalSvc.isDarkModeActive.subscribe(isDarkModeActive => this.isDarkModeActive = isDarkModeActive);
+  this.generalSvc.isNavBarOpen.subscribe(isNavBarOpen => this.isNavBarOpen = isNavBarOpen);
    this.scrollSvc.handleWindowScroll(this);
 
   const scrollingElement = document.getElementById('scrolling-element-inside');

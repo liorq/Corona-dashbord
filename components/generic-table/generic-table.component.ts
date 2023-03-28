@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
 import {data,options} from 'src/app/data/app.arrays';
 import { getGraphLegendList, getNgClassForDataVis } from 'src/app/data/app.functions';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { GraphsService } from 'src/app/services/graphs.service';
 @Component({
   selector: 'app-generic-table',
@@ -40,17 +40,17 @@ export class DataVisualGenericComponent implements OnInit {
   isGraphCustom ?:boolean;
   isTableCustom ?:boolean;
 
-  constructor(private coronaSvc: CoronaService,
+  constructor(private generalSvc: GeneralService,
     private graphSvc: GraphsService) {}
 
   ngOnInit(){
 
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus:boolean)=>{
+    this.generalSvc.isDarkModeActive.subscribe((newStatus:boolean)=>{
       this.isDarkModeActive=newStatus;
       this.graphSvc.toggleDarkModeForItems(this)
       this.initializeGraph()
     })
-     this.coronaSvc.timePeriodsInDays.subscribe(()=>{
+     this.generalSvc.timePeriodsInDays.subscribe(()=>{
       this.initializeGraph()
      })
 

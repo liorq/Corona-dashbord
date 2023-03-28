@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 
 @Component({
   selector: 'app-ellipsis-icon',
@@ -12,10 +12,10 @@ import { CoronaService } from 'src/app/services/corona.service';
 export class EllipsisIconComponent implements OnInit {
   @Input() isActiveShareAndDownload?: boolean;
   isDarkModeActive?: boolean;
-  constructor(private coronaSvc: CoronaService) {}
-  
+  constructor(private generalSvc: GeneralService) {}
+
   ngOnInit(): void {
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
       this.isDarkModeActive = newStatus;
     });
   }

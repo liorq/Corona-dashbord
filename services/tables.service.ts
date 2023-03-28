@@ -27,10 +27,10 @@ export class TablesService {
 
   confirmSelectHandler(componentObj:MySearchOptionsComponent,option: string) {
     if (option == 'ok' && componentObj.searchText.length > 0) {
-      const filteredData = componentObj.coronaSvc.filteredData.getValue();
+      const filteredData = componentObj.generalSvc.filteredData.getValue();
       if (componentObj.graphName) {
         filteredData[graphNameObj[componentObj.graphName]] = componentObj.filteredData;
-        componentObj.coronaSvc.filteredData.next(filteredData);
+        componentObj.generalSvc.filteredData.next(filteredData);
       }
     } else
      this.resetTableData(componentObj);
@@ -38,7 +38,7 @@ export class TablesService {
 
   resetTableData(componentObj:MySearchOptionsComponent) {
     if (componentObj.searchText == '') {
-      componentObj.coronaSvc.filteredData.next({
+      componentObj.generalSvc.filteredData.next({
         firstTable: lightsTable,
         secondTable: VaccTable,
       });

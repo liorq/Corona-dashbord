@@ -7,7 +7,9 @@ import { TableRow } from '../data/app.interfaces';
 @Injectable({
   providedIn: 'root',
 })
-export class CoronaService {
+////GeneralService
+export class GeneralService {
+  ////fix
   componentNameActive = new BehaviorSubject<string>('');
   ranges = new BehaviorSubject<any[]>([]);
   isDarkModeActive = new BehaviorSubject<boolean>(false);

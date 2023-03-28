@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { getVaccGraph } from 'src/app/data/app.graphData';
-import { CoronaService } from 'src/app/services/corona.service';
+import { GeneralService } from 'src/app/services/general-info.service';
 import { GraphsService } from 'src/app/services/graphs.service';
 import { vaccEffObj } from 'src/app/data/app.data-visualization';
 import { DataVisualObj } from 'src/app/data/app.interfaces';
@@ -18,14 +18,14 @@ export class EffectOfVaccinationOnMorbidityComponent {
   @Input()visObjsArray:DataVisualObj[]=vaccEffObj;
 
 
-  constructor(private coronaSvc: CoronaService,private graphSvc:GraphsService) {}
+  constructor(private generalSvc: GeneralService,private graphSvc:GraphsService) {}
   ngOnInit(): void {
 
-    this.coronaSvc.isDarkModeActive.subscribe((newStatus) => {
+    this.generalSvc.isDarkModeActive.subscribe((newStatus) => {
       this.graphSvc.updateDataBasedOnDarkModeActive(this,newStatus,'getVaccGraph',2)
     });
 
-    this.coronaSvc.timePeriodsInDays.subscribe((newTimePeriods) => {
+    this.generalSvc.timePeriodsInDays.subscribe((newTimePeriods) => {
       this.graphSvc.updateDataBasedOnTimePeriods(this,"getVaccGraph",newTimePeriods,"thirdGraph",2)
     });
 

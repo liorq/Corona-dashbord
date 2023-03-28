@@ -109,7 +109,7 @@ export class GraphsService {
   updateSelectedTimePeriod(componentObj:MyOptionsComponent){
     componentObj.periodOfTime = optionPeriods[componentObj.selectedOptions.firstChoice];
       componentObj.timePeriods[graphPeriods[componentObj.graphName||""]] = componentObj.periodOfTime;
-      componentObj.coronaSvc.timePeriodsInDays.next(componentObj.timePeriods);
+      componentObj.generalSvc.timePeriodsInDays.next(componentObj.timePeriods);
   }
   isSelectableConfirm(componentObj:MyOptionsComponent){
     return componentObj.graphName && componentObj.selectedOptions.firstChoice;
