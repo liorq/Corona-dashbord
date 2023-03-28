@@ -7,10 +7,8 @@ import { TableRow } from '../data/app.interfaces';
 @Injectable({
   providedIn: 'root',
 })
-////GeneralService
 export class GeneralService {
-  ////fix
-  componentNameActive = new BehaviorSubject<string>('');
+  ActiveComponentName = new BehaviorSubject<string>('');
   ranges = new BehaviorSubject<any[]>([]);
   isDarkModeActive = new BehaviorSubject<boolean>(false);
   isNavBarOpen = new BehaviorSubject<boolean>(false);

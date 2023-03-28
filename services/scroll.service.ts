@@ -11,7 +11,7 @@ export class ScrollService {
   scrollToClickedComponent(anchorListObj:AnchorListComponent) {
     if (anchorListObj.ranges)
       for (let range of anchorListObj.ranges) {
-        if (range[2] === anchorListObj.componentNameActive) {
+        if (range[2] === anchorListObj.ActiveComponentName) {
           const allComponents = document.getElementById(
             'scrolling-element-inside'
           ) as HTMLElement;
@@ -20,21 +20,21 @@ export class ScrollService {
       }
   }
   isScrollToTitleOfComponentSucceeded(anchorListObj:AnchorListComponent){
-    const activeComponent = document.getElementById(anchorListObj.componentNameActive);
+    const activeComponent = document.getElementById(anchorListObj.ActiveComponentName);
 
-   return activeComponent && anchorListObj.lastComponentActiveId !== anchorListObj.componentNameActive
+   return activeComponent && anchorListObj.lastComponentActiveId !== anchorListObj.ActiveComponentName
 
   }
   scrollToTitleOfComponentHandler(anchorListObj:AnchorListComponent) {
     if(this.isScrollToTitleOfComponentSucceeded(anchorListObj)){
      this.scrollToTitleOfComponent(anchorListObj)
-     anchorListObj.lastComponentActiveId = anchorListObj.componentNameActive;
+     anchorListObj.lastComponentActiveId = anchorListObj.ActiveComponentName;
     }
 
     }
     scrollToTitleOfComponent(anchorListObj:AnchorListComponent){
       const container = document.getElementById('container');
-      const activeComponent = document.getElementById(anchorListObj.componentNameActive);
+      const activeComponent = document.getElementById(anchorListObj.ActiveComponentName);
       const { right } = activeComponent!.getBoundingClientRect();
       container?.scrollTo({ left: right, top: right, behavior: 'smooth' });
     }
@@ -65,7 +65,7 @@ export class ScrollService {
           componentObj.currentPosition + halfWindowHeight >= range[0] &&
           componentObj.currentPosition + halfWindowHeight < range[1]
         ) {
-          componentObj.generalSvc.componentNameActive.next(range[2]);
+          componentObj.generalSvc.ActiveComponentName.next(range[2]);
           break;
         }
       }

@@ -17,7 +17,7 @@ export class MySearchOptionsComponent implements OnInit {
   @Input() dropdownVisible?: boolean;
   @Input() searchText: string = '';
   @Input() tablesData: any[] = [];
-  @Input() filteredData: any[] | any = [];
+  @Input() filteredData: any[] = [];
   @Input() selectedOption: string = '';
   @Input() showResults?: boolean=false;
   isDarkModeActive: boolean = false;

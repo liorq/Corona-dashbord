@@ -3,7 +3,7 @@
     class="para"
     *ngFor="let page of pages; let i = index"
     (click)="scrollToClickedComponent(page)"
-    [ngClass]="{ 'white-background': this.componentNameActive === page }"
+    [ngClass]="{ 'white-background': this.ActiveComponentName === page }"
     id="{{page}}"
     >{{ page }}</a
   >

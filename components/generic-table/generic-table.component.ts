@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
 import {data,options} from 'src/app/data/app.arrays';
 import { getGraphLegendList, getNgClassForDataVis } from 'src/app/data/app.functions';
+import { DataVisualObj } from 'src/app/data/app.interfaces';
 import { GeneralService } from 'src/app/services/general-info.service';
 import { GraphsService } from 'src/app/services/graphs.service';
 @Component({
@@ -10,14 +11,12 @@ import { GraphsService } from 'src/app/services/graphs.service';
   styleUrls: ['./generic-table.component.css'],
 })
 ///DataVisualGenericComponent
-export class DataVisualGenericComponent implements OnInit {
+export class DataVisualGenericComponent implements OnInit,DataVisualObj {
   isEmptyCard?:boolean;
   isDarkModeActive=false;
   dropdownVisible: boolean = false;
   isActiveShareAndDownload:boolean=false;
   ngClassContainer?:{};
-  ////change
-  ////legendList
   legendList = getGraphLegendList(this.isDarkModeActive);
   @Input() isTable?:boolean;
   @Input()title?:string;

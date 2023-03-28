@@ -9,7 +9,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
   styleUrls: ['./anchor-list.component.css'],
 })
 export class AnchorListComponent implements OnInit {
-  componentNameActive: string = '';
+  ActiveComponentName: string = '';
   pages = pages;
   lastComponentActiveId: string = '';
   ranges?: any[];
@@ -19,8 +19,8 @@ export class AnchorListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.generalSvc.componentNameActive.subscribe((newName) => {
-      this.componentNameActive = newName;
+    this.generalSvc.ActiveComponentName.subscribe((newName) => {
+      this.ActiveComponentName = newName;
     });
     this.generalSvc.ranges.subscribe((newData) => {
       this.ranges = newData;
@@ -29,12 +29,12 @@ export class AnchorListComponent implements OnInit {
   }
 
   scrollToClickedComponent(anchor: string) {
-    this.generalSvc.componentNameActive.next(anchor);
+    this.generalSvc.ActiveComponentName.next(anchor);
     this.scrollSvc.scrollToClickedComponent(this);
   }
 
   scrollToTitleOfComponentHandler() {
     this.scrollSvc.scrollToTitleOfComponentHandler(this);
-    this.lastComponentActiveId = this.componentNameActive;
+    this.lastComponentActiveId = this.ActiveComponentName;
   }
 }
